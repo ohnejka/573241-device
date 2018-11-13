@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [ohnejka](https://up.htmlacademy.ru/htmlcss/23/user/573241).
-* Наставник: `Неизвестно`.
+* Наставник: [Мурат Баркинхоев](https://htmlacademy.ru/profile/id186857).
 
 ---
 
