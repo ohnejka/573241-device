@@ -19,23 +19,23 @@
 		</li>
 		<li><a href="#" class="log-in">Войти</a></li>
 		<li><a href="#">Сравнить</a></li>
-		<li><a href=#>Корзина</a></li>
+		<li><a href="#">Корзина</a></li>
 	</ul>
 
 	<nav class="main-nav">
 		<ul class="site-nav">
 			<li><a href="#">Каталог товаров</a>
 				<ul class="catalogue-menu need-hover">
-					<li><a href=#>Виртуальная реальность</a></li>
-					<li><a href=#>Моноподы для селфи</a></li>
-					<li><a href=#>Экшн-камеры </a></li>
-					<li><a href=#>Фитнес-браслеты </a></li>
-					<li><a href=#>Умные часы </a></li>
-					<li><a href=#>Квадрокоптеры </a></li>
+					<li><a href="#">Виртуальная реальность</a></li>
+					<li><a href="device-catalogue.html">Моноподы для селфи</a></li>
+					<li><a href="#">Экшн-камеры </a></li>
+					<li><a href="#">Фитнес-браслеты </a></li>
+					<li><a href="#">Умные часы </a></li>
+					<li><a href="#">Квадрокоптеры </a></li>
 				</ul></li>	
-			<li><a href=#>Доставка</a></li>
-			<li><a href=#>Гарантия</a></li>
-			<li><a href=#>Контакты</a></li>
+			<li><a href="#">Доставка</a></li>
+			<li><a href="#">Гарантия</a></li>
+			<li><a href="#">Контакты</a></li>
 		</ul>
 	</nav>
 </header>
@@ -44,8 +44,15 @@
   		<h1 class="visually-hidden">Device - магазин электроники</h1>
 
 
-      <section class="promo slider">
+      <section class="promo-slider">
         <h2 class="visually-hidden">Выгодные предложения</h2>
+
+        <ul class="promo-paginator radio-button">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+
         <article class="promo-item">
           <h2 class="visually-hidden">Самая длинная селфи-палка</h2>
           <img src="img/index/slider-1-png.png" width="384" height="486" alt="Longest selfie monopodes">
@@ -64,11 +71,7 @@
               <td>Материал</td>
             </tr>
           </table>
-          <ul class="promo paginator">
-            <li class="current-promo-slide">1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
+                                          
         </article>
 
         <article class="promo-item">
@@ -85,11 +88,6 @@
               <td>Без подзарядки</td>
             </tr>
           </table>
-          <ul class="promo paginator">
-            <li>1</li>
-            <li class="current-promo-slide">2</li>
-            <li>3</li>
-          </ul>
         </article>
 
         <article class="promo-item">
@@ -108,11 +106,6 @@
               <td>Радиус поражения</td>
             </tr>
           </table>
-          <ul class="promo paginator">
-            <li>1</li>
-            <li>2</li>
-            <li class="current-promo-slide">3</li>
-          </ul>
         </article>
       </section>
 
@@ -124,7 +117,7 @@
             <a href="#"><img src="img/index/popular-1.png" width="160" height="160" alt="VR">Виртуальная реальность</a>
           </li>
           <li>
-            <a href="#"><img src="img/index/popular-2.png" width="160" height="160" alt="Selfie monopodes">Моноподы для селфи</a>
+            <a href="device-catalogue.html"><img src="img/index/popular-2.png" width="160" height="160" alt="Selfie monopodes">Моноподы для селфи</a>
           </li>
           <li>
             <a href="#"><img src="img/index/popular-3.png" width="160" height="160" alt="Action cameras">Экшн-камеры</a>
@@ -141,24 +134,29 @@
         </ul>
       </section>
 
-      <section class="services slider">
+      <section class="services-slider">
         <h2 class="visually-hidden">Услуги компании</h2>
-        <dl class="services-info">
-          <dt><button>Доставка</button></dt>
-          <dd>
-            <b>Доставка</b>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          </dd>
-          <dt><button>Гарантия</button></dt>
-          <dd><b>Гарантия</b>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+
+        <ul class="services block-button">
+            <li>Доставка</li>
+            <li>Гарантия</li>
+            <li>Кредит</li>
+          </ul>
+
+        <div class="services-item">
+          <b>Доставка</b>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+        <div class="services-item">
+          <b>Гарантия</b>
+          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.</p>
-          </dd>
-          <dt><button>Кредит</button></dt>
-          <dd><b>Кредит</b>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </dd>
-        </dl>
+        </div>
+        
+        <div class="services-item">
+          <b>Кредит</b>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </div>
       </section>
 
       <section class="partners">
