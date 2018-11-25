@@ -7,11 +7,11 @@
   <body>
 
   <header class="main-header">
-  	<a><img src="img/header/device-logo-header.svg" alt="Device logo" width="164" height="36"></a>
+  	<a><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
 
 	<ul class="header-user-tabs unknown-guest">
 		<li>
-			<form class="header-search">
+			<form class="header-search" method="get" action="https://echo.htmlacademy.ru">
 				<label for="searchsite" class="visually-hidden">Поиск по сайту</label>
 				<input type="search" name="searchsite" id="searchsite" placeholder="Поиск по сайту">
 				<button type="submit" value="search" class="visually-hidden">Найти</button>
@@ -47,11 +47,20 @@
       <section class="promo-slider">
         <h2 class="visually-hidden">Выгодные предложения</h2>
 
-        <ul class="promo-paginator radio-button">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
+        <form class="promo-slider-form" method="get" action="https://echo.htmlacademy.ru">
+
+          <input type="radio" name="promo-product" value="selfie-monopode" id="promo-product-selfie-monopode" checked>
+          <label for="promo-product-selfie-monopode" class="visually-hidden">Самая длинная селфи палка</label>
+
+          <input type="radio" name="promo-product" value="fitness-band" id="promo-product-fitness-band">
+          <label for="promo-product-fitness-band" class="visually-hidden">Мотивирующие фитнес-браслеты</label>
+
+          <input type="radio" name="promo-product" value="quadcopter" id="promo-product-quadcopter">
+          <label for="promo-product-quadcopter" class="visually-hidden">Квадрокоптер с лазером</label>
+
+          <button type="submit" class="visually-hidden">Показать</button>
+
+        </form>
 
         <article class="promo-item">
           <h2 class="visually-hidden">Самая длинная селфи-палка</h2>
@@ -137,26 +146,38 @@
       <section class="services-slider">
         <h2 class="visually-hidden">Услуги компании</h2>
 
-        <ul class="services block-button">
-            <li>Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
-          </ul>
+        <form class="services-slider-form" method="get" action="https://echo.htmlacademy.ru">
 
-        <div class="services-item">
+          <input type="radio" name="services-product" value="delivery" id="services-product-delivery" checked>
+          <label for="services-product-delivery">Доставка</label>
+
+          <input type="radio" name="services-product" value="warranty" id="services-product-warranty">
+          <label for="services-product-warranty">Гарантия</label>
+
+          <input type="radio" name="services-product" value="loan" id="services-product-loan">
+          <label for="services-product-loan">Кредит</label>
+
+          <button type="submit" class="visually-hidden">Показать</button>
+
+        </form>
+
+      <ul class="services">
+        <li class="services-item">
           <b>Доставка</b>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        </div>
-        <div class="services-item">
+        </li>
+        <li class="services-item">
           <b>Гарантия</b>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.</p>
-        </div>
+        </li>
         
-        <div class="services-item">
+        <li class="services-item">
           <b>Кредит</b>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-        </div>
+        </li>
+      </ul>
+
       </section>
 
       <section class="partners">
@@ -188,6 +209,36 @@
   			<a href="#"> <img src="img/index/index-map-jpg.jpg" width="560" height="225" alt="Адрес компании: Москва, ул. Строителей, 15"></a>
   			<p><a href="#" class="button">Напишите нам</a></p>
   		</section>
+
+      <section class="modal modal-contact-us">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <form class="contact-us-form">
+          <p>
+            <label for="letter-name">Ваше имя:</label>
+            <input type="text" name="letter-name" id="letter-name" placeholder="Имя Фамилия">
+          </p>
+
+           <p>
+            <label for="letter-email">Ваш e-mail:</label>
+            <input type="text" name="letter-email" id="letter-email" placeholder="email@example.com">
+          </p>
+
+           <p>
+            <label for="letter-content">Текст письма:</label>
+            <textarea name="letter-content" id="letter-content" placeholder="В свободной форме" rows="6"></textarea>
+          </p>
+
+          <button type="submit">Отправить</button>
+          <button type="button">Закрыть окно</button>
+        </form>
+      </section>
+
+      <section class="modal modal-show-map">
+        <h2 class="visually-hidden">Адрес магазина</h2>
+        <img src="img/index/index-map-big.jpg" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15">
+      </section>
+
+
   	</main>
 
   	<footer class="main-footer">
