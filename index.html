@@ -47,20 +47,11 @@
       <section class="promo-slider">
         <h2 class="visually-hidden">Выгодные предложения</h2>
 
-        <form class="promo-slider-form" method="get" action="https://echo.htmlacademy.ru">
+        <button type="button">Самая длинная селфи палка</button>
+        <button type="button">Мотивирующие фитнес-браслеты</button>
+        <button type="button">Квадрокоптер с лазером</button>
+      </section>
 
-          <input type="radio" name="promo-product" value="selfie-monopode" id="promo-product-selfie-monopode" checked>
-          <label for="promo-product-selfie-monopode" class="visually-hidden">Самая длинная селфи палка</label>
-
-          <input type="radio" name="promo-product" value="fitness-band" id="promo-product-fitness-band">
-          <label for="promo-product-fitness-band" class="visually-hidden">Мотивирующие фитнес-браслеты</label>
-
-          <input type="radio" name="promo-product" value="quadcopter" id="promo-product-quadcopter">
-          <label for="promo-product-quadcopter" class="visually-hidden">Квадрокоптер с лазером</label>
-
-          <button type="submit" class="visually-hidden">Показать</button>
-
-        </form>
 
         <article class="promo-item">
           <h2 class="visually-hidden">Самая длинная селфи-палка</h2>
@@ -146,20 +137,9 @@
       <section class="services-slider">
         <h2 class="visually-hidden">Услуги компании</h2>
 
-        <form class="services-slider-form" method="get" action="https://echo.htmlacademy.ru">
-
-          <input type="radio" name="services-product" value="delivery" id="services-product-delivery" checked>
-          <label for="services-product-delivery">Доставка</label>
-
-          <input type="radio" name="services-product" value="warranty" id="services-product-warranty">
-          <label for="services-product-warranty">Гарантия</label>
-
-          <input type="radio" name="services-product" value="loan" id="services-product-loan">
-          <label for="services-product-loan">Кредит</label>
-
-          <button type="submit" class="visually-hidden">Показать</button>
-
-        </form>
+        <button type="button">Доставка</button>
+        <button type="button">Гарантия</button>
+        <button type="button">Кредит</button>
 
       <ul class="services">
         <li class="services-item">
@@ -210,35 +190,6 @@
   			<p><a href="#" class="button">Напишите нам</a></p>
   		</section>
 
-      <section class="modal modal-contact-us">
-        <h2 class="visually-hidden">Напишите нам</h2>
-        <form class="contact-us-form">
-          <p>
-            <label for="letter-name">Ваше имя:</label>
-            <input type="text" name="letter-name" id="letter-name" placeholder="Имя Фамилия">
-          </p>
-
-           <p>
-            <label for="letter-email">Ваш e-mail:</label>
-            <input type="text" name="letter-email" id="letter-email" placeholder="email@example.com">
-          </p>
-
-           <p>
-            <label for="letter-content">Текст письма:</label>
-            <textarea name="letter-content" id="letter-content" placeholder="В свободной форме" rows="6"></textarea>
-          </p>
-
-          <button type="submit">Отправить</button>
-          <button type="button">Закрыть окно</button>
-        </form>
-      </section>
-
-      <section class="modal modal-show-map">
-        <h2 class="visually-hidden">Адрес магазина</h2>
-        <img src="img/index/index-map-big.jpg" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15">
-      </section>
-
-
   	</main>
 
   	<footer class="main-footer">
@@ -266,6 +217,35 @@
   			</a>
   		</p>
   	</footer>
+
+
+    <section class="modal modal-contact-us">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <form class="contact-us-form">
+          <p>
+            <label for="letter-name">Ваше имя:</label>
+            <input type="text" name="letter-name" id="letter-name" placeholder="Имя Фамилия">
+          </p>
+
+           <p>
+            <label for="letter-email">Ваш e-mail:</label>
+            <input type="text" name="letter-email" id="letter-email" placeholder="email@example.com">
+          </p>
+
+           <p>
+            <label for="letter-content">Текст письма:</label>
+            <textarea name="letter-content" id="letter-content" placeholder="В свободной форме"></textarea>
+          </p>
+
+          <button type="submit">Отправить</button>
+          <button type="button">Закрыть окно</button>
+        </form>
+      </section>
+
+      <section class="modal modal-show-map">
+        <h2 class="visually-hidden">Адрес магазина</h2>
+        <img src="img/index/index-map-big.jpg" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15">
+      </section>
 
   </body>
 </html>
