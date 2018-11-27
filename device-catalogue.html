@@ -48,57 +48,69 @@
 		<li><a href="#">Каталог товаров</a></li>
 		<li>Моноподы для селфи</li>
 	</ul>
+	<section class="filter">
+		<h2>Фильтр:</h2>
+		<form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
 
-	<form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
+			<!--
 
-		<!--
+			<fieldset>
+				<legend>Стоимость</legend>
+				<input type="range" min="0" max="8000" step="100">
+			</fieldset>
 
-		<fieldset>
-			<legend>Стоимость</legend>
-			<input type="range" min="0" max="8000" step="100">
-		</fieldset>
+			Здесь будет другой html код и потом верстка ползунка
+			-->
 
-		Здесь будет другой html код и потом верстка ползунка
-		-->
+			<fieldset>
+				<legend>Цвет</legend>
+				<label>
+					<input type="checkbox" name="color-black" checked>
+					Черный
+				</label>
+				<label>
+					<input type="checkbox" name="color-white">
+					Белый
+				</label>
+				<label>
+					<input type="checkbox" name="color-blue" checked>
+					Синий
+				</label>
+				<label>
+					<input type="checkbox" name="color-red" checked>
+					Красный
+				</label>
+				<label>
+					<input type="checkbox" name="color-pink">
+					Розовый
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Bluetooth</legend>
+				<label>
+					<input type="radio" name="bluetooth-option" value="present" checked>Есть
+				</label>
+				<label>
+					<input type="radio" name="bluetooth-option" value="missing">Нет
+				</label>
+			</fieldset>
+			<button type="submit">Показать</button>
 
-		<fieldset>
-			<legend>Цвет</legend>
-			<label>
-				<input type="checkbox" name="color-black" checked>
-				Черный
-			</label>
-			<label>
-				<input type="checkbox" name="color-white">
-				Белый
-			</label>
-			<label>
-				<input type="checkbox" name="color-blue" checked>
-				Синий
-			</label>
-			<label>
-				<input type="checkbox" name="color-red" checked>
-				Красный
-			</label>
-			<label>
-				<input type="checkbox" name="color-pink">
-				Розовый
-			</label>
-		</fieldset>
-		<fieldset>
-			<legend>Bluetooth</legend>
-			<label>
-				<input type="radio" name="bluetooth-option" value="present" checked>Есть
-			</label>
-			<label>
-				<input type="radio" name="bluetooth-option" value="missing">Нет
-			</label>
-		</fieldset>
-		<button type="submit">Показать</button>
+		</form>
+	</section>
 
-	</form>
-
-	<!--Здесь будет сортировка -->
-
+	<section class="sorting">
+		<h2>Сортировка:</h2>
+		<ul class="sort-by">
+			<li><a href="#">По цене</a></li>
+			<li><a href="#">По типу</a></li>
+			<li><a href="#">По популярности</a></li>
+		</ul>
+		<ul class="sort-direction">
+			<li><a href="#">По возрастанию</a></li>
+			<li><a href="#">По убыванию</a></li>
+		</ul>
+	</section>
 
 	<section class="product-catalogue">
 		<h2 class="visually-hidden">Список моноподов для селфи</h2>
@@ -135,14 +147,11 @@
 		</ul>
 	</section>
 
-	<!--Не уверена, нужно сделать кнопками? слова назад и вперед сверстаем как псевдоэелемнты?
-
 	<ul class="pagination">
 		<li><a href="#" class="pagination-item current-page">1</a></li>
 		<li><a href="#" class="pagination-item">2</a></li>
 		<li><a href="#" class="pagination-item">3</a></li>
 	</ul>
--->
 
 </main>
  <footer class="main-footer">
