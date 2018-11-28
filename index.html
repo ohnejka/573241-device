@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
-  <header class="main-header">
+  <header class="main-header" id="top">
   	<a><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
 
 	<ul class="header-user-tabs unknown-guest">
@@ -183,7 +185,9 @@
         </ul>
       </section>
 
-  		<section class="about-us">
+
+  		<div class="style-wrapper">
+        <section class="about-us">
   			<h2>О нас</h2>
   			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
   			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -202,23 +206,24 @@
   			<a href="#"> <img src="img/index/index-map-jpg.jpg" width="560" height="225" alt="Адрес компании: Москва, ул. Строителей, 15"></a>
   			<p><a href="#" class="button">Напишите нам</a></p>
   		</section>
+    </div>
 
   	</main>
 
   	<footer class="main-footer">
-  		<a><img src="img/footer/device-logo-footer.svg" alt="Device logo" width="164" height="36"></a>
+  		<a href="#top" class="footer-logo"><img src="img/footer/device-logo-footer.svg" alt="Device logo" width="164" height="36"></a>
   		<ul class="footer-user-tabs unknown-guest">
 			<li><a href="#">Войти</a></li>
 			<li><a href="#">Сравнить</a></li>
 			<li><a href=#>Корзина</a></li>
 		</ul>
   		<p class="address"> г. Москва, ул. Строителей, 15</p>
-  		<ul class="footer-logistic-info">
+  		<ul class="footer-services">
   			<li><a href="#">Доставка</a></li>
   			<li><a href="#">Гарантия</a></li>
   			<li><a href="#">Контакты</a></li>
   		</ul>
-  		<p class="phone">Тел.: +7 (495) 495-95-95</p>
+  		<p class="tel">Тел.: +7 (495) 495-95-95</p>
   		<ul class="social">
   			<li><a href="#">Facebook</a></li>
   			<li><a href="#">Instagram</a></li>

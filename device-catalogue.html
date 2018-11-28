@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс: Моноподы для селфи</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
-  	<header class="main-header">
+  	<header class="main-header logo-link">
   	<a href="index.html"><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
 
 	<ul class="header-user-tabs authorized-user">
@@ -46,7 +48,7 @@
 	<ul class="breadcrumbs">
 		<li><a href="index.html">Главная</a></li>
 		<li><a href="#">Каталог товаров</a></li>
-		<li>Моноподы для селфи</li>
+		<li class="breadcrumbs-current">Моноподы для селфи</li>
 	</ul>
 	<section class="filter">
 		<h2>Фильтр:</h2>
@@ -62,37 +64,45 @@
 			Здесь будет другой html код и потом верстка ползунка
 			-->
 
-			<fieldset>
+			<fieldset class="filter-color">
 				<legend>Цвет</legend>
-				<label>
-					<input type="checkbox" name="color-black" checked>
-					Черный
-				</label>
-				<label>
-					<input type="checkbox" name="color-white">
-					Белый
-				</label>
-				<label>
-					<input type="checkbox" name="color-blue" checked>
-					Синий
-				</label>
-				<label>
-					<input type="checkbox" name="color-red" checked>
-					Красный
-				</label>
-				<label>
-					<input type="checkbox" name="color-pink">
-					Розовый
-				</label>
+				<ul>
+					<li>
+						<input type="checkbox" name="color-black" id="color-black" checked>
+						<label for="color-black">Черный</label>
+					</li>
+					<li>
+						<input type="checkbox" name="color-white" id="color-white" disabled>
+						<label for="color-white">Белый</label>
+					</li>
+					<li>
+						<input type="checkbox" name="color-blue" id="color-blue" checked>
+						<label for="color-blue">Синий</label>
+					</li>
+
+					<li>
+						<input type="checkbox" name="color-red" id="color-red" checked>
+						<label for="color-red">Красный</label>
+					</li>
+
+					<li>
+						<input type="checkbox" name="color-pink" id="color-pink">
+						<label for="color-pink">Розовый</label>
+					</li>
+				</ul>
 			</fieldset>
-			<fieldset>
+			<fieldset class="filter-bluetooth">
 				<legend>Bluetooth</legend>
-				<label>
-					<input type="radio" name="bluetooth-option" value="present" checked>Есть
-				</label>
-				<label>
-					<input type="radio" name="bluetooth-option" value="missing">Нет
-				</label>
+				<ul>
+					<li>
+						<input type="radio" name="bluetooth-option" value="present" id="present" checked>
+						<label for="present">Есть</label>
+					</li>
+					<li>
+						<input type="radio" name="bluetooth-option" value="missing" id="missing">
+						<label for="missing">Нет</label>
+					</li>
+				</ul>
 			</fieldset>
 			<button type="submit">Показать</button>
 
@@ -119,30 +129,30 @@
 				<p><img src="img/catalogue/item-1-jpg.jpg" width="360" height="380" alt="item-1"></p>
 				<p><a href="#">Любительская селфи-палка</a></p>
 				<p class="item-price">500 руб.</p>
-				<p><a href="#" class="need-hover add-to-cart">В корзину</a></p>
-				<p><a href="#" class="need-hover add-to-comparison">Добавить к сравнению</a></p>
+				<p><a href="#" class="button need-hover add-to-cart">В корзину</a></p>
+				<p><a href="#" class="need-hover compare">Добавить к сравнению</a></p>
 
 			</li>
 			<li>
 				<p><img src="img/catalogue/item-2-jpg.jpg" width="360" height="380" alt="item-2"></p>
 				<p><a href="#">Профессиональная селфи-палка</a></p>
 				<p class="item-price">1 500 руб.</p>
-				<p><a href="#" class="need-hover add-to-cart">В корзину</a></p>
-				<p><a href="#" class="need-hover add-to-comparison">Добавить к сравнению</a></p>
+				<p><a href="#" class="button need-hover add-to-cart">В корзину</a></p>
+				<p><a href="#" class="need-hover compare">Добавить к сравнению</a></p>
 			</li>
 			<li>
 				<p><img src="img/catalogue/item-3-jpg.jpg" width="360" height="380" alt="item-3"></p>
 				<p><a href="#">Непотопляемая селфи-палка</a></p>
 				<p class="item-price">2 500 руб.</p>
-				<p><a href="#" class="need-hover add-to-cart">В корзину</a></p>
-				<p><a href="#" class="need-hover add-to-comparison">Добавить к сравнению</a></p>
+				<p><a href="#" class="button need-hover add-to-cart">В корзину</a></p>
+				<p><a href="#" class="need-hover compare">Добавить к сравнению</a></p>
 			</li>
 			<li>
 				<p><img src="img/catalogue/item-4-jpg.jpg" width="360" height="380" alt="item-4"></p>
 				<p><a href="#">Селфи-палка "Следуй за мной"</a></p>
 				<p class="item-price">4 900 руб.</p>
-				<p><a href="#" class="need-hover add-to-cart">В корзину</a></p>
-				<p><a href="#" class="need-hover add-to-comparison">Добавить к сравнению</a></p>
+				<p><a href="#" class="button need-hover add-to-cart">В корзину</a></p>
+				<p><a href="#" class="need-hover compare">Добавить к сравнению</a></p>
 			</li>
 		</ul>
 	</section>
