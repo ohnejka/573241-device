@@ -1,35 +1,39 @@
 @font-face {
-    font-family: 'open_sanslight';
-    src: url('opensans-light-webfont.woff2') format('woff2'),
-         url('opensans-light-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'open sans';
+    src: local('OpenSans Light'), local('OpenSans-Light'), 
+         url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff');    
+    font-weight: 300;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'open_sansregular';
-    src: url('opensans-regular-webfont.woff2') format('woff2'),
-         url('opensans-regular-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'open sans';
+    src: local('OpenSans Regular'), local('OpenSans-Regular'),
+         url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'gilroylight';
-    src: url('gilroylight-webfont.woff2') format('woff2'),
-         url('gilroylight-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'gilroy';
+    src: local('Gilroy Light'), local('Gilroy-Light'),
+         url('../fonts/gilroylight-webfont.woff2') format('woff2'),
+         url('../fonts/gilroylight-webfont.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'gilroyextrabold';
-    src: url('gilroyextrabold-webfont.woff2') format('woff2'),
-         url('gilroyextrabold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'gilroy';
+    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
+         url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
+         url('../fonts/gilroyextrabold-webfont.woff') format('woff');
+    font-weight: 800;
     font-style: normal;
 
 }
@@ -38,8 +42,9 @@ body {
     margin: 0;
     padding:0;
 
-    font-family: 'gilroyextrabold', 'Arial', sans-serif;
+    font-family: 'gilroy', 'Arial', sans-serif;
     font-weight: 800;
+    font-style: normal;
     font-size: 18px;
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
@@ -50,6 +55,14 @@ body {
 a {
     text-decoration: none;
 
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 
@@ -63,7 +76,7 @@ a {
 
 
 .logo-link>a:hover,
-.mlogo-link>a:focus {
+.logo-link>a:focus {
 
     opacity: 0.6;
 }
@@ -74,8 +87,9 @@ a {
 
 
 .header-user-tabs {
-    font-family: 'open_sanslight', 'Arial', sans-serif;
+    font-family: 'open sans', 'Arial', sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.15px;
@@ -131,6 +145,34 @@ a {
   color: rgba(0, 0, 0, 1);
 }
 
+.header-search button {
+    display: none;
+
+    font: inherit;
+    color: rgba(0, 0, 0, 1);
+
+    border: 2px solid rgba(0, 0, 0, 1);
+    background-color: transparent;
+}
+
+
+.header-search input:focus ~ button,
+.header-search input ~ button:active {
+    
+    display: block;
+}
+
+.header-search input:focus ~ button:hover,
+.header-search input:focus ~ button:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.header-search input ~ button:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 1);
+}
+
 .header-user-tabs a {
     color: rgba(0, 0, 0, 1);
 }
@@ -173,8 +215,9 @@ a {
 
 
 .catalogue-menu a {
-    font-family: 'open_sanslight', 'Arial', sans-serif;
+    font-family: 'open sans', 'Arial', sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 15px;
     line-height: 36px;
     letter-spacing: 0.15px;
@@ -206,8 +249,9 @@ a {
 
 .breadcrumbs li,
 .breadcrumbs a {
-    font-family: 'open_sanslight', 'Arial', sans-serif;
+    font-family: 'open sans', 'Arial', sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.14px;
@@ -232,8 +276,9 @@ a {
 }
 
 .filter-form ul {
-    font-family: 'open_sanslight', 'Arial', sans-serif;
+    font-family: 'open sans', 'Arial', sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 14px;
     line-height: 40px;
     letter-spacing: 0.14px;
@@ -261,8 +306,9 @@ a {
 
 
 .sorting ul {
-    font-family: 'open_sanslight', 'Arial', sans-serif;
+    font-family: 'open sans', 'Arial', sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: normal;
@@ -296,8 +342,9 @@ a {
 } 
 
 .item-list .item-price {
-    font-family: 'gilroylight', 'Arial', sans-serif;
+    font-family: 'gilroy', 'Arial', sans-serif;
     font-size: 16px;
+    font-style: normal;
     font-weigth: 300;
     letter-spacing: 0.16px;
     color:  rgba(70, 70, 70, 1);
@@ -309,10 +356,11 @@ a {
 }
 
 .compare {
-    font-family:'open_sanslight', 'Arial'. sans-serif;
+    font-family:'open sans', 'Arial'. sans-serif;
     font-size: 13px;
     line-height: 20px;
     font-weight: 300;
+    font-style: normal;
     letter-spacing: 0.13px;
     test-align: center;
     vertical-align: middle;
@@ -356,9 +404,10 @@ brands -------------------------------------*/
 
 .about-us p,
 .contacts p {
-    font-family: 'open_sanslight', 'Arial', sans-serif;
+    font-family: 'open sans', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 15px;
+    font-style: normal;
     line-height: 30px;
     letter-spacing: normal;
     color: rgba(70, 70, 70, 1);
@@ -373,8 +422,9 @@ brands -------------------------------------*/
 }
 
 .button {
-    font-family: 'gilroyextrabold', 'Arial', sans-serif;
+    font-family: 'gilroy', 'Arial', sans-serif;
     font-weight: 800;
+    font-style: normal;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 3.6px;
@@ -443,8 +493,9 @@ brands -------------------------------------*/
 .footer-user-tabs,
 .main-footer .address,
 .main-footer .tel {
-    font-family: 'open_sanslight', 'Arial', sans-serif;
+    font-family: 'open sans', 'Arial', sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 15px;
     line-height: 36px;
     letter-spacing: 0.15px;
