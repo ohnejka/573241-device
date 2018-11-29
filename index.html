@@ -51,13 +51,13 @@
 
         <ul class="slider-controls">
           <li>
-            <button type="button">Самая длинная селфи палка</button>
+            <button type="button" class="slider-button">Самая длинная селфи палка</button>
           </li>
           <li>
-            <button type="button">Мотивирующие фитнес-браслеты</button>
+            <button type="button" class="slider-button">Мотивирующие фитнес-браслеты</button>
           </li>
           <li>
-            <button type="button">Квадрокоптер с лазером</button>
+            <button type="button" class="slider-button">Квадрокоптер с лазером</button>
           </li>
         </ul>
 
@@ -69,12 +69,12 @@
           <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a href="#" class="button"> Подробнее</a>
           <table>
-            <tr>
+            <tr class="table-value">
               <td>8,5 м</td>
               <td>5 кг</td>
               <td>Карбон</td>
             </tr>
-            <tr>
+            <tr class="table-heading">
               <td>Длина палки</td>
               <td>Вес палки</td>
               <td>Материал</td>
@@ -88,10 +88,10 @@
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a href="#" class="button"> Подробнее</a>
           <table>
-            <tr>
+            <tr class="table-value">
               <td>48 часов</td>
             </tr>
-            <tr>
+            <tr class="table-heading">
               <td>Без подзарядки</td>
             </tr>
           </table>
@@ -103,11 +103,11 @@
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a href="#" class="button"> Подробнее</a>
           <table>
-            <tr>
+            <tr class="table-value">
               <td>800 м</td>
               <td>50 м</td>
             </tr>
-            <tr>
+            <tr class="table-heading">
               <td>Дальность полета</td>
               <td>Радиус поражения</td>
             </tr>
@@ -127,8 +127,9 @@
             <a href="device-catalogue.html"><img src="img/index/popular-2.svg" width="160" height="160" alt="Selfie monopodes">Моноподы для селфи</a>
           </li>
           <li>
-            <a href="#"><img src="img/index/popular-3.svg" width="160" height="160" alt="Action cameras">Экшн-камеры</a>
+            <a href="#"> <img src="img/index/popular-3.svg" width="160" height="160" alt="Action cameras">Экшн-камеры</a>
           </li>
+
           <li>
             <a href="#"><img src="img/index/popular-4.svg" width="160" height="160" alt="Fitness bands">Фитнес-браслеты</a>
           </li>
@@ -144,39 +145,39 @@
       <section class="services-slider">
         <h2 class="visually-hidden">Услуги компании</h2>
 
-      <ul class="services-controls">
+        <ul class="services-controls">
         <li>
-          <button type="button">Доставка</button>
+          <button type="button" class="button button-services">Доставка</button>
         </li>
         <li>
-          <button type="button">Гарантия</button>
+          <button type="button" class="button button-services">Гарантия</button>
         </li>
         <li>
-          <button type="button">Кредит</button>
+          <button type="button" class="button button-services">Кредит</button>
         </li>
-      </ul>
+       </ul>
 
-      <ul class="services-list">
+        <ul class="services-list">
         <li class="services-item">
-          <b>Доставка</b>
+          <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </li>
         <li class="services-item">
-          <b>Гарантия</b>
+          <h3>Гарантия</h3>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.</p>
         </li>
         
         <li class="services-item">
-          <b>Кредит</b>
+          <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </li>
-      </ul>
+        </ul>
 
       </section>
 
       <section class="brands">
-        <h2 class="visually-hidden">Партнеры компании</h2>
+        <h2 class="visually-hidden">Представленные бренды</h2>
         <ul class="brands-list">
           <li><a href=""><img src="img/index/partner-logo-1.png" width="260" height="100" alt="Products by DJI"></a></li>
           <li><a href=""><img src="img/index/partner-logo-2.png" width="260" height="100" alt="Products by SP Gadgets"></a></li>
@@ -247,7 +248,7 @@
 
            <p>
             <label for="letter-email">Ваш e-mail:</label>
-            <input type="text" name="letter-email" id="letter-email" placeholder="email@example.com">
+            <input type="email" name="letter-email" id="letter-email" placeholder="email@example.com">
           </p>
 
            <p>
@@ -255,14 +256,14 @@
             <textarea name="letter-content" id="letter-content" placeholder="В свободной форме"></textarea>
           </p>
 
-          <button type="submit">Отправить</button>
+          <button type="submit" class="button">Отправить</button>
           <button type="button">Закрыть окно</button>
         </form>
       </section>
 
       <section class="modal modal-show-map">
         <h2 class="visually-hidden">Адрес магазина</h2>
-        <img src="img/index/index-map-big.jpg" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15">
+        <img src="img/index/modal-map-big.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15">
         <button type="button">Закрыть окно</button>
       </section>
 

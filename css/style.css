@@ -378,18 +378,148 @@ a {
 }
 
 
+.pagination {
+    list-style: none;
+}
+
+.pagination .pagination-item {
+    font-size: 17.5px;
+    line-height: 24.5px;
+    letter-spacing: 3.5px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination .current-page {
+    color: rgba(0, 0, 0, 1);
+}
+
+
+
+/* ------------ INDEX: SLIDERS-------------*/
+
+.promo-slider {
+    color: rgba(0, 0, 0, 1);
+    background-color: transparent;
+}
+.promo-slider ul {
+    list-style: none;
+}
+
+.promo-item b {
+    font-size: 47.5px;
+    line-height: 56px;
+    letter-spacing: 0.48px;
+}
+
+.promo-item p {
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(70, 70, 70, 1);
+}
+
+.promo-item .table-value {
+    font-family: 'gilroy', 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.36px;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+.promo-item .table-heading {
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.13px;
+    color: rgba(70, 70, 70, 1);
+}
+
+
+/* ------------ INDEX: POPULAR-------------*/
+
+.popular ul {
+    list-style: none;
+}
+
+.popular a {
+    letter-spacing: 0.18px;
+    color: black;
+}
+
+.popular img {
+    background-color: rgba(240, 197, 46, 0.5);
+}
+
+
+.popular a:hover img,
+.popular a:focus img {
+    background-color: rgba(240, 197, 46, 1);
+}
+
+.popular a:active {
+    opacity: 0.3;
+    /* нужно сделать так, чтобы свойство не влияло на фон картинки  */
+}
 
 
 
 
-/* --------------INDEX PAGE WILL BE HERE ---------- 
-sliders, 
-popular, 
-services, 
-brands -------------------------------------*/
+/* ------------ INDEX: SERVICES-------------*/
+
+
+.services-slider {
+    background: rgba(255, 255, 255, 1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33%, rgba(229, 229, 229, 1) 33%, rgba(229, 229, 229, 1) 100%);
+}
+
+.services-slider ul {
+    list-style: none;
+}
+
+.services-list h3 {
+    letter-spacing: 0.48;
+    font-size: 47.5px;
+    line-height: 47.5px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.services-list p {
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(70, 70, 70, 1);
+}
 
 
 
+/* ------------ INDEX: BRANDS-------------*/
+
+.brands ul {
+    list-style: none;
+}
+
+.brands img {
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
+
+.brands a:hover img,
+.brands a:focus img,
+.brands a:active img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
 
 
 /* ------------ INDEX: ABOUT US + CONTACTS -------------*/
@@ -449,6 +579,17 @@ brands -------------------------------------*/
     color: rgba(0, 0, 0, 0.3);
     background: #f0c52e;
 
+}
+
+.button-services:active {
+    color: rgba(247, 225, 132, 1) ;
+    background: rgba(0, 0, 0, 1);
+
+}
+
+.slider-button {
+
+    /*  для кнопок слайдера стиль будет позже с помощью before элементов */
 }
 
 
@@ -531,3 +672,194 @@ footer .tel {
 .footer-services a:active {
     color: rgba(255, 255, 255, 0.3);
 } 
+
+/* ------------ MODAL STYLES -------------*/
+
+.modal-contact-us {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.contact-us-form label {
+    font-size: 17.5px;
+    line-height: 24.5px;
+    color: color: rgba(0, 0, 0, 1);
+}
+
+.contact-us-form input,
+.contact-us-form textarea {
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 1);
+
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+}
+
+
+.contact-us-form input:hover,
+.contact-us-form textarea:hover {
+    background-color: rgba(234, 234, 234, 1);
+    border: none;
+}
+
+.contact-us-form input:focus,
+.contact-us-form textarea:focus {
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 1);
+
+    background-color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(240, 197, 46, 0.5);
+    outline: none;
+}
+
+
+.contact-us-form input:invalid {
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+
+    background-color: rgba(237, 181, 181, 0.5);
+    border: none;
+}
+
+
+.contact-us-form input::-webkit-input-placeholder,
+.contact-us-form textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+.contact-us-form input::-moz-placeholder,
+.contact-us-form textarea::-moz-placeholder, { /* Firefox 19+ */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+.contact-us-form input:-ms-input-placeholder,
+.contact-us-form textarea:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+.contact-us-form input:-moz-placeholder,
+.contact-us-form textarea:-moz-placeholder { /* Firefox 18- */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+
+.contact-us-form input:hover::-webkit-input-placeholder,
+.contact-us-form textarea:hover::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+.contact-us-form input:hover::-moz-placeholder,
+.contact-us-form textarea:hover::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+.contact-us-form input:hover:-ms-input-placeholder,
+.contact-us-form textarea:hover:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+.contact-us-form input:hover:-moz-placeholder,
+.contact-us-form textarea:hover:-moz-placeholder { /* Firefox 18- */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 0.4);
+}
+
+.contact-us-form input:focus::-webkit-input-placeholder:focus,
+.contact-us-form textarea:focus::-webkit-input-placeholder:focus { /* Chrome/Opera/Safari */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 1);
+}
+.contact-us-form input:focus::-moz-placeholder:focus,
+.contact-us-form textarea:focus::-moz-placeholder:focus { /* Firefox 19+ */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 1);
+}
+.contact-us-form input:focus:-ms-input-placeholder:focus,
+.contact-us-form textarea:focus:-ms-input-placeholder:focus { /* IE 10+ */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 1);
+}
+.contact-us-form input:focus:-moz-placeholder:focus,
+.contact-us-form textarea:focus:-moz-placeholder:focus { /* Firefox 18- */
+    font-family: 'open sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: normal;
+    color: rgba(70, 70, 70, 1);
+}
+
+.modal-show-map img {
+    box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
