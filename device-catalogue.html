@@ -8,8 +8,13 @@
   </head>
   <body>
 
+  	 <div class="main-wrapper">
+    <div class="content-wrapper">
+
   	<header class="main-header logo-link">
   	<a href="index.html"><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
+
+  	<div class="header-wrapper"> 
 
 	<ul class="header-user-tabs authorized-user">
 		<li>
@@ -29,27 +34,42 @@
 		<ul class="site-nav">
 			<li><a href="#">Каталог товаров</a>
 				<ul class="catalogue-menu need-hover">
+					<div class="catalogue-group-one">
 					<li><a href=#>Виртуальная реальность</a></li>
 					<li><a href=#>Моноподы для селфи</a></li>
 					<li><a href=#>Экшн-камеры </a></li>
+				</div>
+				<div class="catalogue-group-two">
 					<li><a href=#>Фитнес-браслеты </a></li>
 					<li><a href=#>Умные часы </a></li>
+				</div>
+				<div class="catalogue-group-three">
 					<li><a href=#>Квадрокоптеры </a></li>
+				</div>	
 				</ul></li>	
 			<li><a href=#>Доставка</a></li>
 			<li><a href=#>Гарантия</a></li>
 			<li><a href=#>Контакты</a></li>
 		</ul>
 	</nav>
+</div>
 </header>
 
 <main class="container">
+	<div class="container-content-wrapper">
 	<h1>Моноподы для селфи</h1>
 	<ul class="breadcrumbs">
 		<li><a href="index.html">Главная</a></li>
 		<li><a href="#">Каталог товаров</a></li>
 		<li class="breadcrumbs-current">Моноподы для селфи</li>
 	</ul>
+	</div>
+
+
+	<div class="container-content-wrapper">
+	<div class="two-column-container">
+
+	<div class="first-column-container">	
 	<section class="filter">
 		<h2>Фильтр:</h2>
 		<form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
@@ -104,11 +124,14 @@
 					</li>
 				</ul>
 			</fieldset>
-			<button type="submit">Показать</button>
+			<button type="submit" class="button">Показать</button>
 
 		</form>
-	</section>
 
+	</section>
+</div>
+
+<div class="second-column-container">
 	<section class="sorting">
 		<h2>Сортировка:</h2>
 		<ul class="sort-by">
@@ -122,6 +145,7 @@
 		</ul>
 	</section>
 
+<div class="catalogue-container">
 	<section class="product-catalogue">
 		<h2 class="visually-hidden">Список моноподов для селфи</h2>
 		<ul class="item-list">
@@ -156,6 +180,7 @@
 			</li>
 		</ul>
 	</section>
+</div>
 
 	<ul class="pagination">
 		<li><a href="#" class="pagination-item current-page">1</a></li>
@@ -163,8 +188,17 @@
 		<li><a href="#" class="pagination-item">3</a></li>
 	</ul>
 
+</div>
+</div>
 </main>
+</div>
+</div>
+</div>
+
  <footer class="main-footer">
+ 	 <div class="main-wrapper">
+    <div class="content-wrapper">
+    	<div class="footer-top">
  	<a href="index.html"><img src="img/footer/device-logo-footer.svg" alt="Device logo" width="164" height="36"></a>
   		<ul class="footer-user-tabs authorized-user">
 			<li><a href="#" class="user-name">Валентин Петухов</a></li>
@@ -172,13 +206,18 @@
 			<li><a href="#">Сравнить</a></li>
 			<li><a href=#>Корзина</a></li>
 		</ul>
+	</div>
+	<div class="footer-middle">
   		<p class="address"> г. Москва, ул. Строителей, 15</p>
-  		<ul class="footer-logistic-info">
+  		<ul class="footer-services">
   			<li><a href="#">Доставка</a></li>
   			<li><a href="#">Гарантия</a></li>
   			<li><a href="#">Контакты</a></li>
   		</ul>
   		<p class="tel">Тел.: +7 (495) 495-95-95</p>
+  	</div>
+  	<div class="footer-bottom">
+  		<div class="decoration-placeholder"></div>
   		<ul class="social">
   			<li><a href="#">Facebook</a></li>
   			<li><a href="#">Instagram</a></li>
@@ -189,6 +228,8 @@
   				Created by HTML Academy
   			</a>
   		</p>
+  	</div>
+</div>
 
  </footer>
 

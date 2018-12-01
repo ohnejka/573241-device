@@ -71,7 +71,8 @@ a {
 .main-header {
     color: rgba(0,0,0,1);
 
-    background-color: rgba(240, 197, 46, 0.5);
+    background: rgba(240, 197, 46, 0.5);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 13%, rgba(240, 197, 46, 0.5) 13%, rgba(240, 197, 46, 0.5) 100%);
 }
 
 
@@ -224,8 +225,134 @@ a {
     color: rgba(0, 0, 0, 1);
 }
 
+/*  ---------------------------header grid--------------  */
+.main-wrapper {
+    width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    outline: 2px dotted black;
+}
+
+.content-wrapper {
+    outline: 2px solid black;
+}
+
+
+.main-header {
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 40px;
+}
+
+.main-header .logo {
+    display: block;
+    width: 164px;
+    heigth: 36px;
+    margin-bottom: 36px;
+
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    outline: 2px solid red;
+}
+
+
+
+.header-user-tabs {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    padding: 0;
+    outline: 1px solid green;
+}
+
+.header-user-tabs li:first-child {
+    margin-right: 370px;
+
+} 
+
+.unknown-guest li:nth-child(2) {
+    margin-right: 220px;
+}
+
+.unknown-guest li:nth-child(3) {
+    margin-right: 60px;
+   
+}
+
+.header-user-tabs.authorized-user li:nth-child(2) {
+    margin-right: 10px;
+}
+
+.header-user-tabs.authorized-user li:nth-child(3) {
+    margin-right: 85px;
+}
+
+.header-user-tabs.authorized-user li:nth-child(4) {
+    margin-right: 60px;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    
+
+    margin:0;
+    padding: 0;
+
+    outline: 1px solid blue;
+}
+
+.site-nav li:first-child {
+    margin-right: auto;
+}
+
+.site-nav li:nth-child(2) {
+    margin-right: 38px;
+}
+
+.site-nav li:nth-child(3) {
+    margin-right: 115px;
+}
+
+.catalogue-menu.need-hover {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding:0;
+    padding-top: 30px;
+    outline: 1px solid blue;
+    width: 555px;
+}
+
+.catalogue-group-one {
+    margin-right: auto;
+}
+
+.catalogue-group-two {
+    margin-right: 75px;
+}
 
 /*  -------------------------INNER CATALOGUE PAGE------------------- */
+
+.container {
+    margin-top: 40px;
+}
+
+.container-content-wrapper {
+    margin-left: 60px;
+    outline: 2px dotted blue;
+}
+
 
 .container h1 {
     font-size: 47.5px;
@@ -233,6 +360,10 @@ a {
     line-height: 47.5px;
     letter-spacing: 0.48px;
     color: rgba(0, 0, 0, 1);
+
+    margin:0;
+    padding:0;
+    margin-bottom: 25px;
 }
 
 .container h2 {
@@ -241,11 +372,24 @@ a {
     letter-spacing: 3.2px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 1);
+
+    margin:0;
+    padding:0;
 }
 
 .breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
 }
+
+.breadcrumbs li {
+    margin-right: 40px;
+}
+
 
 .breadcrumbs li,
 .breadcrumbs a {
@@ -256,6 +400,7 @@ a {
     line-height: 24px;
     letter-spacing: 0.14px;
     color: rgba(0, 0, 0, 0.3);
+    
 }
 
 .breadcrumbs a:hover,
@@ -267,11 +412,99 @@ a {
     color: rgba(0, 0, 0, 0.1);
 }
 
+
+.two-column-container {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-right: 75px;
+
+    width: 265px;
+    outline: 5px solid red;
+}
+
+
+
+.filter form {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.second-column-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    outline: 5px solid red;
+}
+
+.sorting {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.sorting ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.sorting h2 {
+    margin: 0;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.sort-by li {
+    margin-right: 20px;
+}
+
+.sort-by li:last-child {
+    margin-right: none;
+}
+
+.sort-direction li:first-child {
+    margin-right: 10px;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.item-list li {
+    width: 360px;
+    outline: 3px solid blue;
+}
+
+.item-list li:nth-child(2n) {
+    margin-right: 0;
+}
+
+
+
 .filter {
     background-color: rgba(238, 238, 238, 1);
 }
 
 .filter h2 {
+    margin: 0;
+    margin-bottom: 70px;
+    padding: 0;
     background-color: rgba(220, 220, 220, 1);
 }
 
@@ -379,6 +612,12 @@ a {
 
 
 .pagination {
+    display: flex;
+
+    margin: 0 auto;
+    padding: 0;
+
+    outline: 2px solid blue;
     list-style: none;
 }
 
@@ -573,17 +812,20 @@ a {
 .button:hover,
 .button:focus {
     background: #f0c52e;
+    outline: none;
 }
 
 .button:active {
     color: rgba(0, 0, 0, 0.3);
     background: #f0c52e;
+    outline: none;
 
 }
 
 .button-services:active {
     color: rgba(247, 225, 132, 1) ;
     background: rgba(0, 0, 0, 1);
+    outline: none;
 
 }
 
@@ -592,7 +834,38 @@ a {
     /*  для кнопок слайдера стиль будет позже с помощью before элементов */
 }
 
+/* ------------ about us + contacts grid -------------*/
 
+
+.style-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    outline: 1px solid green;
+}
+
+.style-wrapper h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 465px;
+}
+
+
+
+.contacts {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 
 /* ------------ FOOTER STYLES -------------*/
@@ -673,6 +946,105 @@ footer .tel {
     color: rgba(255, 255, 255, 0.3);
 } 
 
+
+
+
+/* ------------ footer grid -------------*/
+
+
+.main-footer {
+    margin: 0;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.footer-wrapper {
+    outline: 2px solid red;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    outline: 2px solid blue;
+}
+
+.footer-user-tabs {
+    display:flex;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-user-tabs li {
+    margin-right: 65px;
+}
+
+.footer-user-tabs li:last-child {
+    margin-right: 0;
+}
+
+
+.footer-user-tabs.authorized-user li:first-child {
+    margin-right: 15px;
+}
+
+.footer-user-tabs.authorized-user li:nth-child(2),
+.footer-user-tabs.authorized-user li:nth-child(3) {
+    margin-right: 60px;
+}
+
+
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    outline: 2px solid blue;
+
+}
+
+.footer-services {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-services li {
+    margin-right: 38px;
+}
+
+.footer-services li:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    outline: 2px solid blue;
+
+}
+
+.footer-bottom .social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.social li {
+    margin-right: 23px;
+}
+
+.social li:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+
 /* ------------ MODAL STYLES -------------*/
 
 .modal-contact-us {
@@ -700,6 +1072,9 @@ footer .tel {
     border: none;
 }
 
+.contact-us-form textarea {
+    resize: none;
+}
 
 .contact-us-form input:hover,
 .contact-us-form textarea:hover {
