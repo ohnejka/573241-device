@@ -647,9 +647,49 @@ html {
 .promo-slider {
     color: rgba(0, 0, 0, 1);
     background-color: transparent;
+    margin-bottom: 100px;
 }
+
 .promo-slider ul {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.promo-item {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.promo-item:first-child .promo-item-left {
+    width: 384px;
+    outline: 2px solid green;
+    margin-right: 125px;
+}
+
+.promo-item:nth-child(2) .promo-item-left {
+    width: 345px;
+    margin-right: 139px;
+    outline: 2px solid green;
+}
+
+.promo-item:last-child .promo-item-left {
+    width: 526px;
+    margin-right: 40px;
+    outline: 2px solid green;
+    
+}
+
+.promo-item-right {
+    outline: 3px dotted pink;
+    width: 560px;
 }
 
 .promo-item b {
