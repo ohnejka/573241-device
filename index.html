@@ -8,13 +8,10 @@
   </head>
   <body>
 
-  <div class="main-wrapper">
-    <div class="content-wrapper">
-
       <header class="main-header" id="top">
-       	<a class="logo"><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
-
-        <div class="header-wrapper"> 
+        <div class="main-container">
+        <div class="header-wrapper">
+          <a class="logo"><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
 	         <ul class="header-user-tabs unknown-guest">
 		          <li>
         			   <form class="header-search" method="get" action="https://echo.htmlacademy.ru">
@@ -29,35 +26,34 @@
         	</ul>
 
 	         <nav class="main-nav">
-          		<ul class="site-nav">
-          			<li><a href="#">Каталог товаров</a>
-          				<ul class="catalogue-menu need-hover">
-                    <div class="catalogue-group-one">
-          					 <li><a href="#">Виртуальная реальность</a></li>
-          					 <li><a href="device-catalogue.html">Моноподы для селфи</a></li>
-          					 <li><a href="#">Экшн-камеры </a></li>
-                    </div>
-                    <div class="catalogue-group-two">
-          					 <li><a href="#">Фитнес-браслеты </a></li>
-          					 <li><a href="#">Умные часы </a></li>
-                    </div>
-                    <div class="catalogue-group-three">
-          					 <li><a href="#">Квадрокоптеры </a></li>
-                    </div>
-          				</ul>
-                </li>	
+              <ul class="site-nav">
+                <li><a href="#">Каталог товаров</a>
+                    <ul class="catalogue-menu need-hover">
+                      <li><a href=#>Виртуальная реальность</a></li>
+                      <li><a href="device-catalogue.html">Моноподы для селфи</a></li>
+                      <li><a href=#>Экшн-камеры </a></li>
+                      <li><a href=#>Фитнес-браслеты </a></li>
+                      <li><a href=#>Умные часы </a></li>
+                      <li class="hidden"><a>placeholder</a>a</li>
+                      <li><a href=#>Квадрокоптеры </a></li> 
+                    </ul>
+                </li> 
           			<li><a href="#">Доставка</a></li>
           			<li><a href="#">Гарантия</a></li>
           			<li><a href="#">Контакты</a></li>
           		</ul>
           </nav>
         </div>
+      </div>
       </header>
 
   	 <main class="container">
       <h1 class="visually-hidden">Device - магазин электроники</h1>
 
+
       <section class="promo-slider">
+        <div class="main-container">
+
         <h2 class="visually-hidden">Выгодные предложения</h2>
 
         <ul class="slider-controls">
@@ -138,10 +134,12 @@
           </div>
         </li>
       </ul>
+    </div>
       </section>
 
   			
       <section class="popular">
+        <div class="main-container">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list">
           <li>
@@ -164,14 +162,13 @@
             <a href="#"><img src="img/index/popular-6.svg" width="160" height="160" alt="Quadcopters">Квадрокоптеры</a>
           </li>
         </ul>
+      </div>
       </section>
-    </div>
-  </div>
+
 
       <section class="services-slider">
+        <div class="main-container">
         <h2 class="visually-hidden">Услуги компании</h2>
-        <div class="main-wrapper">
-          <div class="content-wrapper">
 
             <div class="services-slider-wrapper">
               <ul class="services-controls">
@@ -203,12 +200,11 @@
               </ul>
             </div>
           </div>
-        </div>
       </section>
 
-  <div class="main-wrapper">
-    <div class="content-wrapper">
+
       <section class="brands">
+        <div class="main-container">
         <h2 class="visually-hidden">Представленные бренды</h2>
         <ul class="brands-list">
           <li><a href=""><img src="img/index/partner-logo-1.png" width="260" height="100" alt="Products by DJI"></a></li>
@@ -216,11 +212,12 @@
           <li><a href=""><img src="img/index/partner-logo-3.png" width="260" height="100" alt="Products by GoPro"></a></li>
           <li><a href=""><img src="img/index/partner-logo-4.png" width="260" height="100" alt="Products by Vive"></a></li>
         </ul>
+        </div>
       </section>
-    </div>
 
 
-  	<div class="style-wrapper">
+      <div class="main-container">
+  	   <div class="style-wrapper">
       <section class="about-us">
   			<h2>О нас</h2>
   			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -241,14 +238,11 @@
   			<a href="#" class="button">Напишите нам</a>
   		</section>
     </div>
-  </div>
-
+    </div>
   </main>
 
   <footer class="main-footer">
-    <div class="main-wrapper">
-      <div class="content-wrapper">
-        <div class="footer-wrapper">
+    <div class="main-container">
 
           <div class="footer-top">
           		<a href="#top" class="footer-logo"><img src="img/footer/device-logo-footer.svg" alt="Device logo" width="164" height="36"></a>
@@ -282,29 +276,32 @@
         			</a>
         		</p>
           </div>
-        </div>
       </div>
-    </div>
   </footer>
 
 
     <section class="modal modal-contact-us">
         <h2 class="visually-hidden">Напишите нам</h2>
         <form class="contact-us-form">
-          <p>
-            <label for="letter-name">Ваше имя:</label>
-            <input type="text" name="letter-name" id="letter-name" placeholder="Имя Фамилия">
-          </p>
+          <div class="contact-us-box">
+            <div class="contact-us-first">
+              <p>
+                <label for="letter-name">Ваше имя:</label>
+                <input type="text" name="letter-name" id="letter-name" placeholder="Имя Фамилия">
+              </p>
 
-           <p>
-            <label for="letter-email">Ваш e-mail:</label>
-            <input type="email" name="letter-email" id="letter-email" placeholder="email@example.com">
-          </p>
-
+               <p>
+                <label for="letter-email">Ваш e-mail:</label>
+                <input type="email" name="letter-email" id="letter-email" placeholder="email@example.com">
+              </p>
+            </div>
+          <div class="contact-us-second">
            <p>
             <label for="letter-content">Текст письма:</label>
             <textarea name="letter-content" id="letter-content" placeholder="В свободной форме"></textarea>
           </p>
+        </div>
+      </div>
 
           <button type="submit" class="button">Отправить</button>
           <button type="button">Закрыть окно</button>
