@@ -76,13 +76,13 @@ a {
 }
 
 
-.logo-link>a:hover,
-.logo-link>a:focus {
+.header-wrapper>a:hover,
+.header-wrapper>a:focus {
 
     opacity: 0.6;
 }
 
-.logo-link>a:active {
+.header-wrapper>a:active {
     opacity: 0.3;
 }
 
@@ -236,11 +236,13 @@ html {
 }
 
 
+main {
+    margin-top: 40px;
+}
 
 .main-container {
     width: 1200px;
     margin: 0 auto;
-    margin-top: 40px;
     padding-right: 20px;
     padding-left: 20px;
     outline: 3px solid green;
@@ -255,6 +257,7 @@ html {
     display: block;
     width: 164px;
     heigth: 36px;
+    padding-top: 20px;
    
     margin-bottom: 30px;
 
@@ -1047,12 +1050,12 @@ html {
 }
 
 
-.main-footer>a:hover,
-.main-footer>a:focus {
+.footer-top>a:hover,
+.footer-top>a:focus {
     opacity: 0.6;
 }
 
-.main-footer>a:active {
+.footer-top>a:active {
     opacity: 0.3;
 }
 
