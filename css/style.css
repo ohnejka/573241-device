@@ -72,8 +72,7 @@ a {
     color: rgba(0,0,0,1);
 
     background: rgba(240, 197, 46, 0.5);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 13%, rgba(240, 197, 46, 0.5) 13%, rgba(240, 197, 46, 0.5) 100%);
-    margin-bottom: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 40px, rgba(247, 226, 150, 1) 40px, rgba(247, 226, 150, 1) 100%);
 }
 
 
@@ -241,17 +240,15 @@ html {
 .main-container {
     width: 1200px;
     margin: 0 auto;
+    margin-top: 40px;
     padding-right: 20px;
     padding-left: 20px;
     outline: 3px solid green;
 }
 
 .main-header {
-    padding-top: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 40px;
-     outline: 5px dotted green;
+    width: 100%;
+    outline: 2px dotted green;
 }
 
 .main-header .logo {
@@ -265,12 +262,15 @@ html {
 
 .header-wrapper {
     display: flex;
+    width: 1160px;
     flex-direction: column;
     margin: 0;
     padding-right: 60px;
     padding-left: 60px;
 
     outline: 2px solid red;
+    background: rgba(240, 197, 46, 0.5);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 40px, rgba(247, 226, 150, 1) 40px, rgba(247, 226, 150, 1) 100%);
 }
 
 
@@ -316,6 +316,7 @@ html {
     display: flex;
     justify-content: space-between;
     margin:0;
+    margin-bottom: 40px;
     padding: 0;
 
     outline: 1px solid blue;
@@ -465,7 +466,6 @@ html {
     justify-content: space-between;
     align-items: stretch;
     background-color: transparent;
-    outline: 4px dotted pink;
 }
 
 .first-column-container {
@@ -679,12 +679,15 @@ html {
 
 .pagination {
     display: flex;
-
-    margin: 0 auto;
+    justify-content: center;
+    min-height: 70px;
+    margin-left: 75px;
     padding: 0;
+    width: 760px;
 
     outline: 2px solid blue;
     list-style: none;
+    background-color: rgba(235, 235, 235,1);
 }
 
 .pagination .pagination-item {
@@ -697,6 +700,7 @@ html {
 .pagination .current-page {
     color: rgba(0, 0, 0, 1);
 }
+
 
 
 
