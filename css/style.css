@@ -431,43 +431,47 @@ html {
     color: rgba(0, 0, 0, 0.1);
 }
 
-.br-wrapper {
+.bg-wrapper {
     position: relative;
 }
 
 .bg-wrapper::before {
   position: absolute;
   z-index: -1;
-  top: 560px;
+  top: 0;
   bottom: 0;
   content: "";
 
-  right: 58%;
+  right: 60%;
   left: 0;
-  background: linear-gradient(to bottom, #dadada 70px, #ececec 70px);
-  height: 90%;
- 
+  background: linear-gradient(to bottom, rgba(219, 219, 219, 1) 70px, rgba(238, 238, 238, 1) 70px);
 }
 
 .bg-wrapper::after {
   position: absolute;
   z-index: -1;
-  top: 560px;
+  top: 0;
   bottom: 0;
   content: "";
 
   right: 0;
-  left: 41%;
-  background: linear-gradient(to bottom, #e9e9e9 70px, #fefefe 70px);
-  height: 90%;
-  
+  left:50%;
+  background: linear-gradient(to bottom, rgba(235, 235, 235, 1) 70px, rgba(255, 255, 255, 1) 70px);
 }
 
 
 .two-column-container {
     display:flex;
     justify-content: space-between;
+    align-items: stretch;
     background-color: transparent;
+    outline: 4px dotted pink;
+}
+
+.first-column-container {
+    width: 268px;
+    outline: 2px solid red;
+    background-color: #eeeeee;
 }
 
 .filter {
@@ -478,10 +482,15 @@ html {
     margin-right: 75px;
 
     width: 265px;
-    outline: 5px solid red;
 }
 
-
+.filter h2 {
+    padding: 0;
+    margin: 0;
+    background-color: rbga(220, 220, 220, 1);
+    min-height: 70px;
+    width: 100%;
+}
 
 .filter form {
     box-sizing: border-box;
@@ -493,8 +502,13 @@ html {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    outline: 2px solid red;
 
-    outline: 5px solid red;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.catalogue-container {
+    padding-left: 75px;
 }
 
 .sorting {
@@ -502,12 +516,17 @@ html {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 70px;
+    padding-left: 75px;
+
+    min-height: 70px;
+    background: rgba(235, 235, 235, 1);
 }
 
 .sorting ul {
     display: flex;
     padding: 0;
     margin: 0;
+    background-color: transparent;
 }
 
 .sorting h2 {
@@ -549,14 +568,14 @@ html {
 
 
 
-.filter {
-    background-color: transparent;
-}
+
 
 .filter h2 {
     margin: 0;
     margin-bottom: 70px;
     padding: 0;
+    background-color: rgba(219, 219, 219, 1);
+    width: 100%;
 }
 
 .filter-form ul {
@@ -582,10 +601,6 @@ html {
 
 .filter-form  input:disabled + label {
     color: rgba(166, 166, 166, 1);
-}
-
-.sorting {
-    background-color: transparent;
 }
 
 
