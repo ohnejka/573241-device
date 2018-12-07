@@ -499,46 +499,49 @@ main {
 .open-catalogue:hover .need-hover {
 
     position: absolute;
-    top: 45px;
+    top: 25px;
     left: -60px;
 
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: flex-start;
     flex-wrap: wrap;
 
     width: 1160px;
-    height: 140px;
+    height: 160px;
 
     margin: 0;
     padding:0;
+    padding-top: 20px;
     padding-left: 60px;
     padding-bottom: 10px;
 
     list-style: none;
-    outline: 3px dotted blue;
     z-index: 2;
     background-color: rgba(247, 226, 150, 1);
 }
 
+.catalogue-menu.need-hover > li {
+    width: 200px;
+    margin-right: 40px;
+    max-height: 100px;
+    white-space: nowrap;
+}
 
-.catalogue-menu.need-hover li {
-    margin: 0;
-    margin-right: 60px;
+.catalogue-menu.need-hover > li:nth-child(2) {
+    width: 160px;
+}
+
+.catalogue-menu.need-hover > li:last-child {
+    width: 130px;
+}
+
+
+.need-hover ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.catalogue-menu.need-hover a {
-    vertical-align: middle;
-}
-
-.element-relative {
-    position: relative;
-    bottom: 72px;
-    left: 200px;
-}
 
 
 /*  -------------------------INNER CATALOGUE PAGE------------------- */
@@ -1335,6 +1338,8 @@ main {
 
 .popular img {
     background-color: rgba(240, 197, 46, 0.5);
+    width: 160px;
+    height: 160px;
 }
 
 
