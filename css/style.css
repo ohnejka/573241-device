@@ -57,12 +57,27 @@ a {
 
 }
 
-.visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -71,11 +86,12 @@ a {
 
 .main-header {
     color: rgba(0,0,0,1);
+}
 
+.main-header .header-wrapper {
     background: rgba(240, 197, 46, 0.5);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 40px, rgba(247, 226, 150, 1) 40px, rgba(247, 226, 150, 1) 100%);
 }
-
 
 .header-wrapper>a:hover,
 .header-wrapper>a:focus {
@@ -141,7 +157,7 @@ a {
 }
 
 .header-user-tabs .log-in::before,
-.header-user-tabs .user-name::before {
+.header-user-tabs .user-name-header::before {
 
     position: absolute;
 
@@ -426,6 +442,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
     margin:0;
     margin-bottom: 10px;
     padding: 0;
@@ -443,13 +460,13 @@ main {
     margin: 0;
 }
 
-.site-nav li:first-child {
+.site-nav>li:first-child {
     position: relative;
     padding-right: 30px;
     margin-right: auto;
 }
 
-.site-nav li:first-child::before {
+.site-nav>li:first-child::before {
     position: absolute;
 
     content: '';
@@ -483,6 +500,7 @@ main {
 
     position: absolute;
     top: 45px;
+    left: -60px;
 
     display: flex;
     justify-content: flex-start;
@@ -491,16 +509,18 @@ main {
     align-content: flex-start;
     flex-wrap: wrap;
 
-    width: 1040px;
+    width: 1160px;
     height: 140px;
 
     margin: 0;
     padding:0;
+    padding-left: 60px;
     padding-bottom: 10px;
 
     list-style: none;
     outline: 3px dotted blue;
     z-index: 2;
+    background-color: rgba(247, 226, 150, 1);
 }
 
 
@@ -523,13 +543,20 @@ main {
 
 /*  -------------------------INNER CATALOGUE PAGE------------------- */
 
-
+.container {
+    margin-top: -110px;
+}
 
 .container-content-wrapper {
     margin-left: 60px;
     outline: 2px dotted blue;
+    
 }
 
+.container .header-overflow {
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1;
+}
 
 .container h1 {
     font-size: 47.5px;
@@ -540,18 +567,23 @@ main {
 
     margin:0;
     padding:0;
-    margin-bottom: 25px;
+    padding-top: 35px;
+    margin-bottom: 23px;
 }
 
 .container h2 {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 3.2px;
-    text-transform: uppercase;
+    
     color: rgba(0, 0, 0, 1);
 
     margin:0;
     padding:0;
+}
+
+.container-inner-page h2 {
+    text-transform: uppercase;
 }
 
 .breadcrumbs {
@@ -560,12 +592,29 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .breadcrumbs li {
     margin-right: 40px;
+    position: relative;
 }
+
+.breadcrumbs a::before {
+    content: '';
+
+    position: absolute;
+    bottom: 7px;
+    right: -20px;
+
+    width: 4px;
+    height: 7px;
+
+    background-image: url('../img/catalogue/nav-arrow.svg');
+    background-repeat: no-repeat;
+    nackground-position: 0 0;
+}
+
 
 
 .breadcrumbs li,
@@ -638,16 +687,10 @@ main {
 
     margin-right: 75px;
 
+
     width: 265px;
 }
 
-.filter h2 {
-    padding: 0;
-    margin: 0;
-    background-color: rbga(220, 220, 220, 1);
-    min-height: 70px;
-    width: 100%;
-}
 
 .filter form {
     box-sizing: border-box;
@@ -655,13 +698,123 @@ main {
     background-color: transparent;
 }
 
+
+
+.filter legend {
+    position: relative;
+    margin-bottom: 34px;
+}
+
+.filter legend::before {
+    content: '';
+    position: absolute;
+    top: -13px;
+    left: 0;
+
+    width: 201px;
+    height: 2px;
+
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.range-controls {
+    position: relative;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.range-controls .scale {
+    width: 196px;
+    height: 2px;
+
+
+    background-color: rgba(219, 219, 219, 1);
+}
+
+.range-controls .bar {
+    width: 110px;
+    height: 2px;
+
+    background-color: rgba(145, 201, 47, 1);
+}
+
+.range-controls .toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 1);
+
+    background-color: rgba(171, 171, 171, 1);
+    box-shadow: 0 1px 1px 0 rgba(219, 219, 219, 1);
+
+    cursor: pointer;
+
+}
+
+.range-controls .toggle::active{
+    transform: scale(1.1);
+}
+
+
+.range-controls .toggle-min {
+    top: -9px;
+    left: -4px;
+}
+
+.range-controls .toggle-max {
+    top: -9px ;
+    left: 110px;
+}
+
+.price-controls {
+    font-size: 0;
+}
+
+.price-controls label {
+    display: inline-block;
+    
+    font-family: 'gilroy', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 24px ;
+    letter-spacing: normal;
+    width: 35%;
+
+    color: rgba(0, 0, 0, 0.2);
+}
+
+
+.price-controls input {
+
+    width: 40%;
+    border: none;
+    background-color: transparent;
+
+    color: rgba(0, 0, 0, 0.2);
+
+}
+
+
+.filter-color ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+
+
+
+
 .second-column-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     outline: 2px solid red;
-
     background-color: rgba(255, 255, 255, 1);
+    padding-bottom: 60px;
 }
 
 .catalogue-container {
@@ -673,6 +826,7 @@ main {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 70px;
+    padding-top: 24px;
     padding-left: 75px;
 
     min-height: 70px;
@@ -684,6 +838,7 @@ main {
     padding: 0;
     margin: 0;
     background-color: transparent;
+    list-style: none;
 }
 
 .sorting h2 {
@@ -726,14 +881,21 @@ main {
 
 
 
-
 .filter h2 {
     margin: 0;
-    margin-bottom: 70px;
+    margin-bottom: 83px;
     padding: 0;
+    padding-top: 24px;
+    padding-left: 1px;
     background-color: rgba(219, 219, 219, 1);
     width: 100%;
+    min-height: 70px;
+    vertical-align: middle;
 }
+
+/*  --------- FILTERS --------- */
+
+
 
 .filter-form ul {
     font-family: 'open sans', 'Arial', sans-serif;
@@ -750,15 +912,168 @@ main {
 .filter-form fieldset {
     letter-spacing: 0.18px;
     color: rgba(0, 0, 0, 1);
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 42px;
 }
 
-.filter-form input + label {
+
+.filter-color label,
+.filter-bluetooth label {
+    position: relative;
+}
+
+.filter-color label::before {
+    content: '';
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url('../img/catalogue/checkbox-off.svg');
+    background-repeat: no-repeat;
+    background-position:  0 0;
+}
+
+.filter-color input:checked + label::before {
+    background-image: url('../img/catalogue/checkbox-on.svg');
+}
+
+.filter-color input:disabled + label::before {
+    opacity: 0.25;
+}
+
+
+
+.filter-color label:hover::before,
+.filter-color label:focus::before {
+    opacity: 0.6;
+}
+
+.filter-color label:active::before {
+    opacity: 1;
+}
+
+
+.filter-color-list input + label {
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+
+.filter-color-list input:hover + label,
+.filter-color-list input:focus + label {
     color: rgba(0, 0, 0, 1);
 }
 
-.filter-form  input:disabled + label {
-    color: rgba(166, 166, 166, 1);
+.filter-color-list input:active + label {
+    color: rgba(0, 0, 0, 1);
 }
+
+.filter-color-list input:disabled + label {
+    color: rgba(166, 166, 166, 1);
+    cursor: default;
+}
+.filter-color legend {
+    margin-bottom: 17px;
+}
+
+
+
+.filter-color-list label {
+    display: block;
+    padding: 0;
+    padding-left: 40px;
+    margin: 0;
+}
+
+.filter-bluetooth legend {
+    margin-bottom: 3px;
+}
+
+
+
+
+
+
+.filter-bluetooth label::before {
+    content: '';
+
+    position: absolute;
+    top: -4px;
+    left: -41px;
+
+    width: 25px;
+    height: 25px;
+
+    background-color: rgba(255, 255, 255, 1);
+    border: 4px solid rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    
+}
+
+.filter-bluetooth input:checked + label::before {
+    top: 0;
+    left: -37px;
+
+    width: 17px;
+    height: 17px;
+    background-color: rgba(0, 0, 0, 1);
+    border: 4px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 4px black;
+
+    
+}
+
+.filter-bluetooth input:disabled + label::before {
+    opacity: 0.25;
+    cursor: default;
+}
+
+
+
+.filter-bluetooth label:hover::before,
+.filter-bluetooth label:focus::before {
+    opacity: 0.6;
+}
+
+.filter-bluetooth label:active::before {
+    opacity: 1;
+}
+
+.filter-bluetooth input + label {
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+
+.filter-bluetooth input:hover + label,
+.filter-bluetooth input:focus + label {
+    color: rgba(0, 0, 0, 1);
+}
+
+.filter-bluetooth input:active + label {
+    color: rgba(0, 0, 0, 1);
+}
+
+.filter-bluetooth input:disabled + label {
+    color: rgba(166, 166, 166, 1);
+    cursor: default;
+}
+
+
+.filter-form button {
+    margin-top: -40px;
+    margin-left: 1px;
+}
+
+
+
+/*  ----------- SORTING------------- */
 
 
 .sorting ul {
@@ -835,30 +1150,76 @@ main {
 
 
 .pagination {
+    position: relative;
     display: flex;
     justify-content: center;
     min-height: 70px;
     margin-left: 75px;
     padding: 0;
+    padding-top: 25px;
+    padding-left: 29px;
     width: 760px;
 
-    outline: 2px solid blue;
     list-style: none;
     background-color: rgba(235, 235, 235,1);
 }
 
-.pagination .pagination-item {
-    font-size: 17.5px;
-    line-height: 24.5px;
-    letter-spacing: 3.5px;
+.pagination-item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    margin-right: 28px;
     color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination .current-page {
+.page-current {
     color: rgba(0, 0, 0, 1);
 }
 
+.pagination li:last-child {
+    margin-right: 0;
+}
 
+.page-forward,
+.page-back {
+    position: absolute;
+    top: 0px;
+    
+    width: 126px;
+    height: 70px;
+
+    line-height: 70px;
+    text-align: center;
+
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+}
+
+.page-forward {
+    right: -28px;
+    padding-right: 14px;
+}
+
+.page-back {
+    left: 0px;
+}
+
+
+.page-forward:hover,
+.page-forward:focus,
+.page-back:hover,
+.page-back:focus {
+    background-color: rgba(217, 217, 217, 1);
+
+}
+
+.page-forward:active,
+.page-back:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(217, 217, 217, 1);
+
+}
 
 
 /* ------------ INDEX: SLIDERS-------------*/
@@ -1104,17 +1465,56 @@ main {
     line-height: 30px;
     letter-spacing: normal;
     color: rgba(70, 70, 70, 1);
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.about-us-details {
+    margin-bottom: 37px;
 }
 
 .about-us ul {
+    padding-left: 35px;
+    margin: 0;
+    margin-bottom: 63px;
+
     font-size: 16px;
     line-height: 40px;
     color: rgba(0, 0, 0, 1);
 
     list-style: none;
+    outline: 1px dotted blue;
 }
 
+.about-us li {
+    position: relative;
+}
+
+.about-us li::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: -33px;
+
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(229, 229, 229, 1)
+
+}
+
+
 .button {
+    display: inline-block;
+
+    min-width: 200px;
+    min-height: 40px;
+    padding-right: 25px;
+    padding-left: 25px;
+
     font-family: 'gilroy', 'Arial', sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -1128,7 +1528,7 @@ main {
 
 
     background: rgba(255, 255, 255, 1);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 33%, rgba(240, 197, 46, 1) 33%, rgba(240, 197, 46, 1) 66%, rgba(255, 255, 255, 0) 66%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 16px, rgba(240, 197, 46, 1) 16px, rgba(240, 197, 46, 1) 25px, rgba(255, 255, 255, 0) 25px);
 
     border: none;
 }
@@ -1176,23 +1576,53 @@ main {
 .about-us {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-    width: 465px;
+    width: 477px;
     outline: 1px solid yellow;
-    margin-bottom: 90px;
+    padding-bottom: 72px;
 }
 
+.about-us h2,
+.contacts h2 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-top: 52px;
+    margin-bottom: 44px;
 
+}
+
+.about-us h2::before,
+.contacts h2::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: '';
+    width: 80px;
+    height: 7px;
+
+    background-color: rgba( 0, 0, 0, 1);
+
+}
 
 .contacts {
     width: 560px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
     outline: 1px solid yellow;
-    margin-bottom: 90px;
+}
+
+.contacts-show-map {
+    margin-top: 10px;
+    margin-bottom: 67px;
+}
+
+.about-us button,
+.contacts button {
+
+
 }
 
 
@@ -1752,44 +2182,63 @@ li .twitter {
 /* ------------ MODAL grids-------------*/
 
 .modal-contact-us {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -276px;
+
+
     display: block;
     width: 960px;
-    min-height: 553px;
+    height: 552px;
 
-    margin: 50px auto;
     padding-left: 100px;
     padding-top: 90px;
     padding-bottom: 90px;
     padding-right: 100px;
     box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+
+    display: none;
+
     
 }
 
 .contact-us-box {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
 }
 
 .contact-us-first {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 2px;
 }
 
-.contact-us-first p {
+.contact-us-first p,
+.contact-us-second p {
     padding: 0;
     margin: 0;
+}
+
+.contact-us-form {
+    position: relative;
+}
+
+.contact-us-form label {
+    padding-left: 1px;
 }
 
 .contact-us-form input {
     width: 360px;
     height: 50px;
     margin-top: 10px;
-    margin-bottom: 35px;
     margin-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 18px;
+    padding-left: 19px;
     padding-right: 20px;
 }
 
@@ -1798,17 +2247,67 @@ li .twitter {
     width: 760px ;
     height: 156px;
     margin-top: 10px;
-    margin-bottom: 50px;
-    padding-top: 15px;
+    margin-bottom: 30px;
+    padding-top: 13px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
+
+.close-button {
+    font-size: 0;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    width: 55px;
+    height: 55px;
+
+    background-image: url('../img/index/modal-close.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.6;
+}
+
+.close-button:hover,
+.close-button:focus {
+    opacity: 1;
+}
+
+.close-button:active {
+    opacity: 0.3;
+}
+
+.contact-us-form .close-button {
+    position: absolute;
+    top: -68px;
+    right: -79px;
+
+}
+
+
 .modal-show-map {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
     display: block;
     width: 960px;
     height: 560px;
-    margin: 20px auto;
+
+    margin-top: -285px;
+    margin-left: -480px;
 
     box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+
+    display: none;
+}
+
+.modal-show-map .close-button {
+    position: absolute;
+    top: 22px;
+    right: 21px;
 }

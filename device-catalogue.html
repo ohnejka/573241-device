@@ -21,7 +21,7 @@
 						<button type="submit" value="search">Найти</button>
 					</form>
 				</li>
-				<li><a href="#" class="user-name">Валентин Петухов</a></li>
+				<li><a href="#" class="user-name-header">Валентин Петухов</a></li>
 				<li><a href="#" class="log-out">Выйти</a></li>
 				<li><a href="#" class="compare">Сравнить</a></li>
 				<li><a href=# class="cart">Корзина</a></li>
@@ -48,8 +48,8 @@
 	 </div>
   </header>
 
-<main class="container">
-	<div class="main-container">
+<main class="container container-inner-page">
+	<div class="main-container header-overflow">
 		<div class="container-content-wrapper">
 			<h1>Моноподы для селфи</h1>
 			<ul class="breadcrumbs">
@@ -70,52 +70,62 @@
 						<h2>Фильтр:</h2>
 						<form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
 
-						<!--
+							<fieldset class="filter-price">
+								<legend>Стоимость</legend>
+												
+								<div class="filter-price-range">
+									<div class="range-controls">
+										<div class="scale">
+				              				<div class="bar"></div>
+				            			</div>
+										<div class="toggle toggle-min"></div>
+										<div class="toggle toggle-max"></div>
+									</div>
+									<div class="price-controls">
+										<label class="min-price">от <input name="min-price" type="text" value="0"></label>
+				            			<label class="max-price">до <input name="max-price" type="text" value="5000"></label>
+									</div>
+								</div>
+							</fieldset>
 
-						<fieldset>
-							<legend>Стоимость</legend>
-							<input type="range" min="0" max="8000" step="100">
-						</fieldset>
-
-						Здесь будет другой html код и потом верстка ползунка
-						-->
-
+						
+						
 							<fieldset class="filter-color">
 								<legend>Цвет</legend>
-								<ul>
+								<ul class="filter-color-list">
 									<li>
-										<input type="checkbox" name="color-black" id="color-black" checked>
+										<input class="visually-hidden" type="checkbox" name="color-black" id="color-black" checked>
 										<label for="color-black">Черный</label>
 									</li>
 									<li>
-										<input type="checkbox" name="color-white" id="color-white" disabled>
+										<input class="visually-hidden" type="checkbox" name="color-white" id="color-white" disabled>
 										<label for="color-white">Белый</label>
 									</li>
 									<li>
-										<input type="checkbox" name="color-blue" id="color-blue" checked>
+										<input class="visually-hidden" type="checkbox" name="color-blue" id="color-blue" checked>
 										<label for="color-blue">Синий</label>
 									</li>
 
 									<li>
-										<input type="checkbox" name="color-red" id="color-red" checked>
+										<input class="visually-hidden" type="checkbox" name="color-red" id="color-red" checked>
 										<label for="color-red">Красный</label>
 									</li>
 
 									<li>
-										<input type="checkbox" name="color-pink" id="color-pink">
+										<input class="visually-hidden" type="checkbox" name="color-pink" id="color-pink">
 										<label for="color-pink">Розовый</label>
 									</li>
 								</ul>
 							</fieldset>
 							<fieldset class="filter-bluetooth">
 								<legend>Bluetooth</legend>
-								<ul>
+								<ul class="filter-bluetooth-list">
 									<li>
-										<input type="radio" name="bluetooth-option" value="present" id="present" checked>
+										<input class="visually-hidden" type="radio" name="bluetooth-option" value="present" id="present" checked>
 										<label for="present">Есть</label>
 									</li>
 									<li>
-										<input type="radio" name="bluetooth-option" value="missing" id="missing">
+										<input class="visually-hidden" type="radio" name="bluetooth-option" value="missing" id="missing" >
 										<label for="missing">Нет</label>
 									</li>
 								</ul>
@@ -180,9 +190,11 @@
 
 
 					<ul class="pagination">
-						<li><a href="#" class="pagination-item current-page">1</a></li>
-						<li><a href="#" class="pagination-item">2</a></li>
-						<li><a href="#" class="pagination-item">3</a></li>
+						<li><a class="pagination-item page-back" href="#">Назад</a></li>
+						<li><a class="pagination-item page-current" href="#" >1</a></li>
+						<li><a class="pagination-item" href="#">2</a></li>
+						<li><a class="pagination-item" href="#">3</a></li>
+						<li><a class="pagination-item page-forward" href="#">Вперед</a></li>
 					</ul>
 				</div>
 				</div>
