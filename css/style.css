@@ -547,7 +547,6 @@ main {
 
 .container-content-wrapper {
     margin-left: 60px;
-    outline: 2px dotted blue;
     
 }
 
@@ -749,8 +748,8 @@ main {
 
 }
 
-.range-controls .toggle::active {
-    transform: scale(2)
+.range-controls .toggle:active {
+    transform: scale(1.1)
 }
 
 
@@ -898,7 +897,7 @@ main {
 /*  --------- FILTERS --------- */
 .filter h2 {
     margin: 0;
-    margin-bottom: 83px;
+    margin-bottom: 82px;
     padding: 0;
     padding-top: 24px;
     padding-left: 1px;
@@ -927,7 +926,7 @@ main {
     border: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 42px;
+    margin-bottom: 41px;
 }
 
 
@@ -1004,7 +1003,7 @@ main {
 }
 
 .filter-bluetooth legend {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 
 
@@ -1400,7 +1399,7 @@ main {
 .promo-slider {
     color: rgba(0, 0, 0, 1);
     background-color: transparent;
-    margin-bottom: 87px;
+    margin-bottom: 97px;
 }
 
 .promo-slider .main-container {
@@ -1450,7 +1449,6 @@ main {
     justify-content: flex-end;
     width: 1160px;
     padding-left: 90px;
-    outline: 2px dotted orange;
 
 }
 
@@ -1545,7 +1543,7 @@ main {
 
 .promo-item .button {
     min-width: 220px;
-    margin-bottom: 46px;
+    margin-bottom: 48px;
 
 }
 
@@ -1671,7 +1669,10 @@ main {
     
 }
 
-
+.item-2,
+.item-3 {
+    display: none;
+}
 
 /* ------------ INDEX: POPULAR-------------*/
 
@@ -1701,7 +1702,7 @@ main {
     width: 86px;
     height: 117px;
     position: absolute;
-    top: 41px;
+    top: 42px;
     left: 38px;
 }
 
@@ -1733,7 +1734,7 @@ main {
     width: 132px;
     height: 69px;
     position: absolute;
-    top: 47px;
+    top: 49px;
     left: 14px;
 }
 
@@ -1803,8 +1804,8 @@ main {
 /* ------------ INDEX: SERVICES-------------*/
 
 .services-slider {
-    padding-bottom: 123px;
-    margin-bottom: 90px;
+    padding-bottom: 119px;
+    margin-bottom: 94px;
 
     background: rgba(255, 255, 255, 1);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 103px, rgba(229, 229, 229, 1) 103px);
@@ -1864,7 +1865,6 @@ main {
 .services-list li {
     width: 760px;
     flex-shrink: 0;
-    outline: 2px dotted orange;
 }
 
 .services-list h3 {
@@ -1875,7 +1875,7 @@ main {
     color: rgba(0, 0, 0, 1);
 
     margin: 0;
-    margin-top: 75px;
+    margin-top: 76px;
     margin-bottom: 32px;
     padding: 0;
 
@@ -1943,7 +1943,10 @@ main {
     padding: 0;
 }
 
-
+.services-item:nth-child(2),
+.services-item:last-child {
+    display: none;
+}
 
 /* ------------ INDEX: BRANDS-------------*/
 
@@ -1952,7 +1955,7 @@ main {
     justify-content: space-between;
 
     margin: 0;
-    margin-bottom: 90px;
+    margin-bottom: 87px;
     padding: 0;
     list-style: none;
 }
@@ -2086,7 +2089,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 9px;
+    margin-bottom: 11px;
 }
 
 .style-wrapper h2 {
@@ -2107,8 +2110,8 @@ main {
     margin: 0;
     padding: 0;
     position: relative;
-    padding-top: 52px;
-    margin-bottom: 44px;
+    padding-top: 53px;
+    margin-bottom: 43px;
 
 }
 
