@@ -11,7 +11,7 @@
       <header class="main-header" id="top">
         <div class="main-container">
         <div class="header-wrapper">
-          <a class="logo"><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
+          <a class="logo inactive"><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
 	         <ul class="header-user-tabs unknown-guest">
 		          <li>
         			   <form class="header-search" method="get" action="https://echo.htmlacademy.ru">
@@ -58,60 +58,64 @@
       </div>
       </header>
 
+
+
   	 <main class="container">
       <h1 class="visually-hidden">Device - магазин электроники</h1>
 
-
       <section class="promo-slider">
-        <div class="main-container">
-
+      <div class="main-container">
         <h2 class="visually-hidden">Выгодные предложения</h2>
+        <input type="radio" class="visually-hidden slide-1" id="slide-1" name="slide-1" checked>
+        <input type="radio" class="visually-hidden slide-2" id="slide-2" name="slide-2" >
+        <input type="radio" class="visually-hidden slide-3" id="slide-3" name="slide-3" >
 
-        <ul class="slider-controls">
-          <li>
-            <button type="button" class="slider-button">Самая длинная селфи палка</button>
-          </li>
-          <li>
-            <button type="button" class="slider-button">Мотивирующие фитнес-браслеты</button>
-          </li>
-          <li>
-            <button type="button" class="slider-button">Квадрокоптер с лазером</button>
-          </li>
-        </ul>
+        <div class="slider-controls">
 
+            <label for="slide-1">Самая длинная селфи палка</label>
+            <label for="slide-2">Мотивирующие фитнес-браслеты</label>
+            <label for="slide-3">Квадрокоптер с лазером</label>
+
+        </div>
 
 
-      <ul class="slider-list">
-        <li class="promo-item">
-          <div class="promo-item-left">
-            <img src="img/index/slider-1-png.png" width="384" height="486" alt="Longest selfie monopodes">
-          </div>
-          <div class="promo-item-right">
-            <b>Делай селфи, как Бен Стиллер!</b>
-            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a href="#" class="button"> Подробнее</a>
-            <table>
-              <tr class="table-value">
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
-              <tr class="table-heading">
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
-              </tr>
-            </table>
-          </div>                              
+
+
+        <ul class="slider-list">
+
+
+          <li class="promo-item item-1" id="item-1">
+            <div class="promo-item-left">
+              <img src="img/index/slider-1-png.png" width="384" height="486" alt="Longest selfie monopodes">
+            </div>
+            <div class="promo-item-right">
+              <b>Делай селфи, <br>как Бен Стиллер!</b>
+              <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <a href="#" class="button"> Подробнее</a>
+              <table>
+                <tr class="table-value">
+                  <td>8,5 м</td>
+                  <td>5 кг</td>
+                  <td>Карбон</td>
+                </tr>
+                <tr class="table-heading">
+                  <td>Длина палки</td>
+                  <td>Вес палки</td>
+                  <td>Материал</td>
+                </tr>
+              </table>
+            </div>                              
         </li>
 
-        <li class="promo-item">
+
+
+        <li class="promo-item  item-2">
           <div class="promo-item-left">
             <img src="img/index/slider-2-png.png" width="345" height="485" alt="Fitness bands">
           </div>
           <div class="promo-item-right">
-            <b>Худеем правильно!</b>
-            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <b>Худеем<br> правильно!</b>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
             <a href="#" class="button"> Подробнее</a>
             <table>
               <tr class="table-value">
@@ -124,7 +128,9 @@
           </div>
         </li>
 
-        <li class="promo-item">
+
+
+        <li class="promo-item  item-3">
           <div class="promo-item-left">
             <img src="img/index/slider-3-png.png" width="526" height="334" alt="Quadcopters">
           </div>
@@ -153,24 +159,55 @@
         <div class="main-container">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-list">
+
+
           <li>
-            <a href="#"><img src="img/index/popular-1.svg" width="160" height="160" alt="VR">Виртуальная реальность</a>
+            <a href="#" class="popular-item popular-1">
+              <div class="img-wrapper">
+                <img src="img/index/popular-1.svg" width="97" height="65" alt="VR">
+              </div>
+              <span>Виртуальная реальность</span></a>
           </li>
+
+
+
           <li>
-            <a href="device-catalogue.html"><img src="img/index/popular-2.svg" width="160" height="160" alt="Selfie monopodes">Моноподы для селфи</a>
-          </li>
-          <li>
-            <a href="#"> <img src="img/index/popular-3.svg" width="160" height="160" alt="Action cameras">Экшн-камеры</a>
+            <a href="device-catalogue.html" class="popular-item popular-2">
+              <div class="popular-item img-wrapper">
+                <img src="img/index/popular-2.svg" width="86" height="117" alt="Selfie monopodes">
+              </div>
+              <span>Моноподы <br>для селфи</span></a>
           </li>
 
           <li>
-            <a href="#"><img src="img/index/popular-4.svg" width="160" height="160" alt="Fitness bands">Фитнес-браслеты</a>
+            <a href="#" class="popular-item popular-3">
+              <div class="img-wrapper">
+                <img src="img/index/popular-3.svg" width="71" height="87" alt="Action cameras">
+              </div>
+              <span>Экшн-камеры</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="popular-item popular-4">
+              <div class="img-wrapper">
+                <img src="img/index/popular-4.svg" width="107" height="65" alt="Fitness bands">
+              </div>
+              <span>Фитнес-браслеты</span></a>
           </li>
           <li>
-            <a href="#"><img src="img/index/popular-5.svg" width="160" height="160" alt="Smartwatch">Умные часы</a>
+            <a href="#" class="popular-item popular-5">
+              <div class="img-wrapper">
+                <img src="img/index/popular-5.svg" width="56" height="98" alt="Smartwatch">
+              </div>
+              <span>Умные часы</span></a>
           </li>
           <li>
-            <a href="#"><img src="img/index/popular-6.svg" width="160" height="160" alt="Quadcopters">Квадрокоптеры</a>
+            <a href="#" class="popular-item popular-6">
+              <div class="img-wrapper">
+                <img src="img/index/popular-6.svg" width="132" height="69" alt="Quadcopters">
+              </div>
+              <span>Квадрокоптеры</span></a>
           </li>
         </ul>
       </div>
@@ -206,7 +243,7 @@
                 </li>
                 <li class="services-item">
                   <h3>Кредит</h3>
-                  <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                  <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные <br>условия кредита. Выгодные для нашего банка, разумеется.</p>
                 </li>
               </ul>
             </div>
