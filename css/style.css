@@ -151,7 +151,6 @@ input[type="radio"].visually-hidden {
 
 .header-user-tabs a {
     display: block;
-    outline: 2px dotted red;
     padding-left: 25px;
 
 }
@@ -361,12 +360,10 @@ main {
     margin: 0 auto;
     padding-right: 20px;
     padding-left: 20px;
-    outline: 3px solid green;
 }
 
 .main-header {
     width: 100%;
-    outline: 2px dotted green;
 }
 
 .main-header .logo {
@@ -388,7 +385,6 @@ main {
     padding-right: 60px;
     padding-left: 60px;
 
-    outline: 2px solid red;
     background: rgba(240, 197, 46, 0.5);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 40px, rgba(247, 226, 150, 1) 40px, rgba(247, 226, 150, 1) 100%);
 }
@@ -403,7 +399,6 @@ main {
     margin: 0;
     margin-bottom: 38px;
     padding: 0;
-    outline: 1px solid green;
 }
 
 
@@ -448,11 +443,9 @@ main {
     padding: 0;
     min-height: 175px;
 
-    outline: 1px solid blue;
 }
 
 .site-nav>li {
-    outline: 2px dotted red;
 }
 
 .site-nav a {
@@ -595,7 +588,7 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
 }
 
 .breadcrumbs li {
@@ -679,8 +672,7 @@ main {
 
 .first-column-container {
     width: 268px;
-    outline: 2px solid red;
-    background-color: #eeeeee;
+    background-color: rgba(238, 238, 238, 1);
 }
 
 .filter {
@@ -755,8 +747,8 @@ main {
 
 }
 
-.range-controls .toggle::active{
-    transform: scale(1.1);
+.range-controls .toggle::active {
+    transform: scale(2)
 }
 
 
@@ -815,9 +807,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    outline: 2px solid red;
     background-color: rgba(255, 255, 255, 1);
-    padding-bottom: 60px;
+    padding-bottom: 56px;
 }
 
 .catalogue-container {
@@ -827,7 +818,7 @@ main {
 .sorting {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    
     margin-bottom: 70px;
     padding-top: 24px;
     padding-left: 75px;
@@ -846,44 +837,63 @@ main {
 
 .sorting h2 {
     margin: 0;
-    margin-right: 40px;
     padding: 0;
+    margin-right: 53px;
 }
 
-.sort-by li {
-    margin-right: 20px;
-}
+.sort-by {
+    display: flex;
+    justify-content: space-between;
+    width: 282px;
 
-.sort-by li:last-child {
-    margin-right: none;
+
 }
 
 .sort-direction li:first-child {
     margin-right: 10px;
 }
 
-.item-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    padding: 0;
-    margin: 0;
-    margin-bottom: 40px;
+.sorting .sort-direction {
+    margin-left: auto;
 }
 
-.item-list li {
-    width: 360px;
-    outline: 3px solid blue;
+.sort-direction a {
+    display: block;
+    margin-top: 7px;
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+
+    background-image: url('../img/catalogue/icon-up-dir.svg');
+    background-repeat: no-repeat;
+    background-position:  0 0;
+
+    opacity: 0.2;
 }
 
-.item-list li:nth-child(2n) {
-    margin-right: 0;
+.sort-direction a:hover,
+.sort-direction a:focus {
+    opacity: 0.4;
+}
+
+.sort-direction a:active {
+    opacity: 1;
+}
+
+.sort-direction .ascending {
+    margin-right: 10px;
+}
+
+.sort-direction .descending {
+    margin-right: 4px;
+    background-image: url('../img/catalogue/icon-down-dir.svg');
 }
 
 
 
 
+
+/*  --------- FILTERS --------- */
 .filter h2 {
     margin: 0;
     margin-bottom: 83px;
@@ -891,13 +901,10 @@ main {
     padding-top: 24px;
     padding-left: 1px;
     background-color: rgba(219, 219, 219, 1);
-    width: 100%;
+    width: 268px;
     min-height: 70px;
     vertical-align: middle;
 }
-
-/*  --------- FILTERS --------- */
-
 
 
 .filter-form ul {
@@ -1104,9 +1111,79 @@ main {
     color: rgba(0, 0, 0, 1);
 }
 
+
+
+
+
+/* -------------    ITEM CARDS ------------*/
+
+
+
+
+
 .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 14px;
+
     list-style: none;
 }
+
+.item-list li {
+    position: relative;
+    width: 360px;
+    height: 465px;
+
+    margin-bottom: 40px;
+}
+
+
+.item-list li:last-child,
+.item-list li:nth-last-child(2) {
+    margin-bottom: 0;
+}
+
+.item-list li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.item-list li.novelty {
+    position:relative;
+}
+
+.item-list li.novelty::before {
+    content: 'new';
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    
+    font-size: 14px;
+    line-height: 60px;
+    letter-spacing: 0.7px;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+    vertical-align: middle;
+
+
+    border: 2px solid rgba(0, 0, 0, 0.2) ;
+
+}
+
+
 
 .item-list p,
 .item-list a {
@@ -1124,13 +1201,79 @@ main {
     color:  rgba(70, 70, 70, 1);
 }
 
-.item-list img:hover,
-.item-list img:focus {
+.item-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 
+    padding-top: 12px;
 }
 
-.add-to-compare {
-    font-family:'open sans', 'Arial'. sans-serif;
+.item-description a {
+    width: 260px;
+}
+
+.item-description a:hover,
+.item-description a:focus {
+    opacity: 0.6;
+}
+
+.item-description a:active {
+    opacity: 0.3;
+}
+
+.-item-list img {
+    width: 360px;
+    height: 380px;
+}
+
+
+
+.item-list li:hover, 
+.item-list li:focus {
+    cursor: pointer;
+}
+
+
+.item-actions {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 360px;
+    height: 380px;
+
+    background-color: rgba( 238, 238, 238, 0.7);
+
+    cursor: pointer;
+    z-index: 5;
+}
+
+.item-list li:hover .item-actions,
+.item-list li:focus .item-actions {
+    display: block;
+}
+
+.actions-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 174px;
+}
+
+
+
+.actions-wrapper .button {
+    letter-spacing: 3.6px;
+    margin-bottom: 14px;
+}
+
+
+.actions-wrapper .add-to-compare {
+    font-family:'open sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 20px;
     font-weight: 300;
@@ -1140,16 +1283,24 @@ main {
     vertical-align: middle;
 
     color: rgba(0, 0, 0, 0.5);
+
 }
 
-.compare:hover,
-.compare:focus {
+.actions-wrapper .add-to-compare:hover,
+.actions-wrapper .add-to-compare:focus {
     color: rgba(0, 0, 0, 1);
 }
 
-.compare:active {
+.add-to-compare:active {
     color:rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+
+/*   ----- PAGINATION -----------*/
+
 
 
 .pagination {
@@ -1174,6 +1325,15 @@ main {
     text-transform: uppercase;
     margin-right: 28px;
     color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item:hover,
+.pagination-item:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-item:active {
+    color: rgba(0, 0, 0, 1);
 }
 
 .page-current {
@@ -1201,7 +1361,7 @@ main {
 
 .page-forward {
     right: -28px;
-    padding-right: 14px;
+    padding-right: 12px;
 }
 
 .page-back {
@@ -1482,14 +1642,13 @@ main {
 .about-us ul {
     padding-left: 35px;
     margin: 0;
-    margin-bottom: 63px;
+    margin-bottom: 52px;
 
     font-size: 16px;
     line-height: 40px;
     color: rgba(0, 0, 0, 1);
 
     list-style: none;
-    outline: 1px dotted blue;
 }
 
 .about-us li {
@@ -1516,9 +1675,10 @@ main {
     display: inline-block;
 
     min-width: 200px;
-    min-height: 40px;
     padding-right: 25px;
     padding-left: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 
     font-family: 'gilroy', 'Arial', sans-serif;
     font-weight: 800;
@@ -1570,7 +1730,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    outline: 1px solid green;
+    margin-bottom: 9px;
 }
 
 .style-wrapper h2 {
@@ -1583,7 +1743,6 @@ main {
     flex-direction: column;
     align-items: flex-start;
     width: 477px;
-    outline: 1px solid yellow;
     padding-bottom: 72px;
 }
 
@@ -1616,19 +1775,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    outline: 1px solid yellow;
 }
 
 .contacts-show-map {
     margin-top: 10px;
-    margin-bottom: 67px;
+    margin-bottom: 61px;
 }
 
-.about-us button,
-.contacts button {
-
-
-}
 
 
 /* ------------ FOOTER STYLES -------------*/
@@ -1743,9 +1896,6 @@ footer .tel {
     flex-direction: column;
     width: 210px;
     margin-right: 114px;
-
-
-    outline: 1px solid blue;
 }
 
 .footer-left img {
@@ -1777,7 +1927,6 @@ footer .tel {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-end;
-    outline: 1px solid blue;
     width: 323px;
 
 }
@@ -1795,7 +1944,6 @@ footer .tel {
 .footer-user-tabs a {
     display: block;
     position: relative;
-    outline: 2px dotted red;
     padding-left: 25px;
 }
 
@@ -1907,8 +2055,6 @@ footer .tel {
 .footer-middle {
     display: flex;
     flex-direction: column;
-    outline: 1px solid white;
-
 }
 
 .footer-services {
@@ -1919,8 +2065,6 @@ footer .tel {
     margin-top: 71px;
     margin-bottom: 63px;
     padding: 0;
-
-    outline: 1px dotted red;
 }
 
 
