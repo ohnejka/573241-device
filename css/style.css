@@ -1423,6 +1423,7 @@ main {
 }
 
 .slider-controls label {
+    position: relative;
     display: inline-block;
   
     width: 10px;
@@ -1438,10 +1439,34 @@ main {
     box-shadow: 0 0 0 1px black;
 }
 
+.slider-controls label::before {
+    position: absolute;
+    top: 4px;
+    left: 3px;
 
+    content: '';
 
+    width: 3px;
+    height: 3px;
 
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    box-shadow: 0 0 0 1px black;
+    display: none;
+}
 
+#slide-1:checked ~ .slider-controls label:first-child::before {
+    display: block;
+}
+
+#slide-2:checked ~ .slider-controls label:nth-child(2)::before {
+    display: block;
+}
+
+#slide-3:checked ~ .slider-controls label:last-child::before {
+    display: block;
+}
 
 
 .promo-item {
