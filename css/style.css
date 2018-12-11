@@ -491,7 +491,8 @@ main {
     
 }
 
-.open-catalogue:hover .need-hover {
+.open-catalogue:hover .need-hover,
+.open-catalogue:focus .need-hover {
 
     position: absolute;
     top: 25px;
@@ -1468,6 +1469,18 @@ main {
     display: block;
 }
 
+
+#slide-1:focus ~ .slider-controls label:first-child {
+    outline: rgba(59, 153, 252, 1) auto 5px;
+}
+
+#slide-2:focus ~ .slider-controls label:nth-child(2) {
+    outline: rgba(59, 153, 252, 1) auto 5px;
+}
+
+#slide-3:focus ~ .slider-controls label:last-child {
+    outline: rgba(59, 153, 252, 1) auto 5px;
+}
 
 .promo-item {
     display: flex;
