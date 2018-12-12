@@ -121,13 +121,14 @@ input[type="radio"].visually-hidden {
 }
 
 .header-search input {
-
+    position: relative;
     font: inherit;
     margin-left: 40px;
     width: 315px;
 
     border: none;
     background-color: transparent;
+
 }
 
 
@@ -249,20 +250,27 @@ input[type="radio"].visually-hidden {
 }
 
 .header-search button {
-    display: none;
+    
+    position: absolute;
+    top: -3px;
+    right: -65px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     font: inherit;
     color: rgba(0, 0, 0, 1);
 
     border: 2px solid rgba(0, 0, 0, 1);
     background-color: transparent;
+
+    display: none;
 }
 
 
 .header-search input:focus ~ button,
 .header-search input ~ button:active {
     
-    display: inline-block;
+    display: block;
 }
 
 .header-search input:focus ~ button:hover,
@@ -279,15 +287,14 @@ input[type="radio"].visually-hidden {
 .header-search button::before {
     content: '';
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: -2px;
+    right: 60px;
 
-    width: 410px;
+    width: 360px;
     height: 2px;
 
     background-color: rgba(0, 0, 0, 1);
 }
-
 
 
 .header-user-tabs a {
