@@ -553,7 +553,7 @@ main {
     padding:0;
     padding-top: 20px;
     padding-left: 60px;
-    padding-bottom: 10px;
+    padding-bottom: 11px;
 
     list-style: none;
     z-index: 20;
@@ -610,7 +610,7 @@ main {
     margin:0;
     padding:0;
     padding-top: 35px;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 }
 
 .container h2 {
@@ -785,7 +785,7 @@ main {
 .range-controls {
     position: relative;
     padding-left: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .range-controls .scale {
@@ -841,6 +841,8 @@ main {
 
 .price-controls label {
     display: inline-block;
+    vertical-align: top;
+    margin-top: -5px;
     
     font-family: 'gilroy', 'Arial', sans-serif;
     font-size: 14px;
@@ -869,7 +871,7 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 
@@ -1513,7 +1515,7 @@ main {
 .promo-slider {
     color: rgba(0, 0, 0, 1);
     background-color: transparent;
-    margin-bottom: 97px;
+    margin-bottom: 100px;
 }
 
 .promo-slider .main-container {
@@ -1539,6 +1541,7 @@ main {
 .slider-controls label {
     position: relative;
     display: inline-block;
+    vertical-align: botttom;
   
     width: 10px;
     height: 10px;
@@ -1702,7 +1705,7 @@ main {
 
 .promo-item .button {
     min-width: 220px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 
 }
 
@@ -1732,7 +1735,7 @@ main {
 
 }
 .table-heading td {
-    padding-top: 6px;
+    padding-top: 8px;
 }
 
 .table-heading td:first-child {
@@ -2145,7 +2148,7 @@ main {
             justify-content: space-between;
 
     margin: 0;
-    margin-bottom: 87px;
+    margin-bottom: 89px;
     padding: 0;
     list-style: none;
 }
