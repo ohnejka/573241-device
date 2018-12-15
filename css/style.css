@@ -3097,6 +3097,7 @@ li .twitter {
     background-position: 0 0;
 
     opacity: 0.6;
+    cursor: pointer;
 }
 
 .close-button:hover,
@@ -3139,4 +3140,43 @@ li .twitter {
     position: absolute;
     top: 22px;
     right: 21px;
+}
+
+@keyframes appear {
+    0% {opacity: 0;
+        transform: translateX(-500px);
+    }
+
+
+    100% {opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes error {
+
+    30% {
+        transform: scale(0.9);
+    }
+
+    60% {
+        transform:scale(1.05);
+    }
+
+    80% {
+        transform:scale(0.95);
+    }
+
+}
+
+.popup-show {
+    display: block;
+    animation-name: appear;
+    animation-duration: 0.3s;
+}
+
+.popup-error {
+    animation-name: error;
+    animation-duration: 0.3s;
+}
 }
