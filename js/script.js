@@ -53,7 +53,7 @@ form.addEventListener('submit', function(evt) {
 		contactPopup.classList.add('popup-error');
 	} else {
 
-		if(isStroageSupport) {
+		if(isStorageSupport) {
 			localStorage.setItem('name', nameField);
 			localStorage.setItem('email', emailField);
 		}
@@ -61,3 +61,37 @@ form.addEventListener('submit', function(evt) {
 	}
 });
 
+window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      if (contactPopup.classList.contains("popup-show")) {
+        contactPopup.classList.remove("popup-show");
+      }
+    }
+  });
+
+
+
+var findUs = document.querySelector('.contacts-show-map');
+var mapPopup = document.querySelector('.modal-show-map');
+var mapClose = mapPopup.querySelector('.close-button');
+
+findUs.addEventListener('click', function (evt) {
+	console.log('button found');
+	evt.preventDefault();
+	mapPopup.classList.add('popup-show');
+});
+
+mapClose.addEventListener('click', function (evt) {
+	evt.preventDefault();
+	mapPopup.classList.remove('popup-show');
+});
+
+window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("popup-show")) {
+        mapPopup.classList.remove("popup-show");
+      }
+    }
+  });
