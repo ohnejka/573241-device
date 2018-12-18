@@ -62,7 +62,7 @@ form.addEventListener('submit', function(evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-    evt.preventDefault();
+    
     if (evt.keyCode === 27) {
       if (contactPopup.classList.contains("popup-show")) {
         contactPopup.classList.remove("popup-show");
@@ -77,7 +77,6 @@ var mapPopup = document.querySelector('.modal-show-map');
 var mapClose = mapPopup.querySelector('.close-button');
 
 findUs.addEventListener('click', function (evt) {
-	console.log('button found');
 	evt.preventDefault();
 	mapPopup.classList.add('popup-show');
 });
@@ -88,7 +87,7 @@ mapClose.addEventListener('click', function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-    evt.preventDefault();
+   
     if (evt.keyCode === 27) {
       if (mapPopup.classList.contains("popup-show")) {
         mapPopup.classList.remove("popup-show");
