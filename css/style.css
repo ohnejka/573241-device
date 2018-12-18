@@ -1842,6 +1842,8 @@ main {
 #slide-1:checked ~ .slider-list #item-1, 
 #slide-2:checked ~ .slider-list #item-2,
 #slide-3:checked ~ .slider-list #item-3  {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 } 
 
@@ -3165,41 +3167,81 @@ li .twitter {
     right: 21px;
 }
 
-@keyframes appear {
+@-webkit-keyframes appear {
     0% {opacity: 0;
-        transform: translateX(-500px);
+        -webkit-transform: translateX(-500px);
+                transform: translateX(-500px);
     }
 
 
     100% {opacity: 1;
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
+}
+
+@keyframes appear {
+    0% {opacity: 0;
+        -webkit-transform: translateX(-500px);
+                transform: translateX(-500px);
+    }
+
+
+    100% {opacity: 1;
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes error {
+
+    30% {
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+    }
+
+    60% {
+        -webkit-transform:scale(1.05);
+                transform:scale(1.05);
+    }
+
+    80% {
+        -webkit-transform:scale(0.95);
+                transform:scale(0.95);
+    }
+
 }
 
 @keyframes error {
 
     30% {
-        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
     }
 
     60% {
-        transform:scale(1.05);
+        -webkit-transform:scale(1.05);
+                transform:scale(1.05);
     }
 
     80% {
-        transform:scale(0.95);
+        -webkit-transform:scale(0.95);
+                transform:scale(0.95);
     }
 
 }
 
 .popup-show {
     display: block;
-    animation-name: appear;
-    animation-duration: 0.3s;
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
 }
 
 .popup-error {
-    animation-name: error;
-    animation-duration: 0.3s;
-}
+    -webkit-animation-name: error;
+            animation-name: error;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
 }
