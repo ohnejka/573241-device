@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style-minified.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
@@ -13,21 +13,21 @@
         <div class="header-wrapper">
           <a class="logo inactive"><img src="img/header/device-logo-header.svg" alt="Логотип компании Device" width="164" height="36"></a>
 	         <ul class="header-user-tabs unknown-guest">
-		          <li>
+		          <li class="header-user-item">
         			   <form class="header-search" method="get" action="https://echo.htmlacademy.ru">
         				    <label for="searchsite" class="visually-hidden">Поиск по сайту</label>
         				    <input type="search" name="searchsite" id="searchsite" placeholder="Поиск по сайту">
         				    <button type="submit" value="search">Найти</button>
         			   </form>
 		          </li>
-        		  <li><a href="#" class="log-in">Войти</a></li>
-        		  <li><a href="#" class="compare">Сравнить</a></li>
-        		  <li><a href="#" class="cart">Корзина</a></li>
+        		  <li class="header-user-item"><a href="#" class="log-in">Войти</a></li>
+        		  <li class="header-user-item"><a href="#" class="compare">Сравнить</a></li>
+        		  <li class="header-user-item"><a href="#" class="cart">Корзина</a></li>
         	</ul>
 
 	         <nav class="main-nav header-main-nav">
               <ul class="site-nav">
-                <li class="open-catalogue"><a href="#">Каталог товаров</a>
+                <li class="open-catalogue site-nav-item"><a href="#">Каталог товаров</a>
                     <ul class="catalogue-menu need-hover">
                       <li>
                         <ul>
@@ -49,9 +49,9 @@
                         </ul>
                       </li>
                     </ul>
-          			<li><a href="#">Доставка</a></li>
-          			<li><a href="#">Гарантия</a></li>
-          			<li><a href="#">Контакты</a></li>
+          			<li class="site-nav-item"><a href="#">Доставка</a></li>
+          			<li class="site-nav-item"><a href="#">Гарантия</a></li>
+          			<li class="site-nav-item"><a href="#">Контакты</a></li>
 
           		</ul>
           </nav>
@@ -174,7 +174,7 @@
 
           <li>
             <a href="device-catalogue.html" class="popular-item popular-2">
-              <div class="popular-item img-wrapper">
+              <div class="img-wrapper">
                 <img src="img/index/popular-2.svg" width="86" height="117" alt="Selfie monopodes">
               </div>
               <span>Моноподы <br>для селфи</span></a>
@@ -222,7 +222,7 @@
             <div class="services-slider-wrapper">
               <ul class="services-controls">
                 <li>
-                  <button type="button" class="button button-services">Доставка</button>
+                  <button type="button" class="button button-services active">Доставка</button>
                 </li>
                 <li>
                   <button type="button" class="button button-services">Гарантия</button>
@@ -313,9 +313,9 @@
               <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="social">
-              <li><a href="#" class="facebook">Facebook</a></li>
-              <li><a href="#" class="instagram">Instagram</a></li>
-              <li><a href="#" class="twitter">Twitter</a></li>
+              <li class="social-item"><a href="#" class="facebook">Facebook</a></li>
+              <li class="social-item"><a href="#" class="instagram">Instagram</a></li>
+              <li class="social-item"><a href="#" class="twitter">Twitter</a></li>
         </ul>
       </div>
 
