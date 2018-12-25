@@ -531,7 +531,7 @@ main {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 1160px;
-  height: 164px;
+  min-height: 164px;
   margin: 0;
   padding: 0;
   padding-top: 20px;
@@ -545,7 +545,6 @@ main {
 .catalogue-menu.need-hover > li {
   width: 200px;
   margin-right: 40px;
-  max-height: 100px;
   white-space: nowrap;
 }
 
